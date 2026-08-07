@@ -5,12 +5,13 @@ State class: `PUBLIC_WORKING_PROJECT_STATE`
 ## Training state
 
 ```text
-TRAINING_MODULES_ACCEPTED = 14 / 15
-MODULE_15 = PENDING_SUBMISSION_AND_REVIEW
-FINAL_QUALIFICATION = PENDING_EXTERNAL_EVALUATION
+TRAINING_MODULES_ACCEPTED = 15 / 15
+TRAINING_CURRICULUM = COMPLETE
+MODULE_15 = ACCEPTED
+FINAL_QUALIFICATION = PENDING_EXTERNAL_HOLDOUTS
 ```
 
-Hephaestus may evaluate candidate work during training but may not self-award final qualification.
+Hephaestus completed the designed fifteen-module curriculum and both capstones. Final qualification remains an external-evaluator decision and has not been self-awarded.
 
 ## Capstones
 
@@ -34,7 +35,63 @@ RECOVERY_TARGET = FORGEWATCH_R1_RESTORE_CANDIDATE
 REPAIR_EXECUTION = NOT_PERFORMED
 ```
 
-Material corrections included removal of unsupported forensic precision: an invented timestamp, an invented item-level damaged inventory, and an unsupported named timezone identifier were all retracted.
+Material corrections removed unsupported forensic precision: an invented exact timestamp, an invented item-level damaged inventory, and an unsupported named timezone identifier were all retracted. Aggregate evidence and unknown item-level state are now kept separate.
+
+## Module 15 outcome
+
+Module 15 produced and preserved:
+
+- final operating doctrine;
+- native Project intake and architecture decision procedure;
+- Project Instructions method;
+- source/file, memory, app/authority, prompt-injection, retrieval/visual, and provenance models;
+- release/configuration, cold-start, debugging, rollback/migration/repair, and evaluation standards;
+- correction audit;
+- capstone audit;
+- A–J candidate competency evidence packet;
+- external holdout recommendations;
+- final operating manual.
+
+The canonical public operating manual is `docs/OPERATING_MANUAL.md`.
+
+## Candidate competency evidence
+
+Module 15 advisory scores:
+
+```text
+A = 4
+B = 4
+C = 4
+D = 4
+E = 3
+F = 4
+G = 4
+H = 4
+I = 3
+J = 4
+AVERAGE = 3.8 / 4.0
+```
+
+These are evidence summaries, not qualification.
+
+The remaining weaknesses relevant to external evaluation are concentrated in:
+
+- empirical memory/cross-chat performance (`E`);
+- provenance precision under tempting incomplete forensic schemas (`I`);
+- designed-but-unexecuted runtime tests generally.
+
+## External holdouts required
+
+Before final `QUALIFIED` status under the training program, external evaluator testing should include unseen fixtures covering:
+
+1. fresh-domain Project build;
+2. unseen mixed-release recovery;
+3. permission/authority trap;
+4. visual-route trap;
+5. documentation-versus-observation conflict;
+6. forensic schema with intentionally missing fields;
+7. correction uptake;
+8. fresh-chat repeat after apparent qualification.
 
 ## Current evidence conventions
 
@@ -74,6 +131,17 @@ PROJECT_INSTRUCTIONS_LIMIT:
   OBSERVED = 8000 characters
 ```
 
+## Runtime evidence still absent
+
+```text
+RUNTIME_PROJECT_INSTALLATIONS_VERIFIED = 0
+LIVE_FORGEWATCH_REPAIRS_EXECUTED = 0
+FORGEWATCH_PROJECT_CHAT_QUALIFIED = NO
+FORGEWATCH_VOICE_QUALIFIED = NO
+FORGEWATCH_DEEP_RESEARCH_QUALIFIED = NO
+FORGEWATCH_WORK_QUALIFIED = NO
+```
+
 ## Persistent-state semantics
 
 A repository checkpoint establishes that repository content existed at a commit. It does not establish uninterrupted runtime continuity, hidden memory state, or automatic background saving.
@@ -82,12 +150,8 @@ A future Hephaestus session should read the latest accepted state before claimin
 
 ## Next state transition
 
-Module 15 should produce:
+The next transition is not another training module. It is external holdout evaluation.
 
-- final operating manual;
-- complete correction audit;
-- A–J competency evidence packet;
-- holdout recommendations;
-- final training status block with `PENDING_EXTERNAL_EVALUATION`.
+Until those holdouts are evaluated, the strongest public qualification state is:
 
-After Module 15 review, this file should be updated by a new commit rather than silently rewritten without history.
+`TRAINING_COMPLETE_PENDING_EXTERNAL_HOLDOUTS`
