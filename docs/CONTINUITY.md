@@ -1,37 +1,41 @@
 # Hephaestus Continuity Architecture
 
-This document defines how a trained Hephaestus chat, future working branches, and the public GitHub repository cooperate without pretending that separate ChatGPT runtimes share uninterrupted memory.
+This document defines how the qualified Hephaestus trained template, future working branches, and the public GitHub repository cooperate without pretending that separate ChatGPT runtimes share uninterrupted memory.
 
 ## Three distinct layers
 
-### 1. Trained template
+### 1. Qualified trained template
 
-After external qualification is complete, the training chat should be renamed by the user to:
+External qualification is complete.
+
+The training chat should now be renamed by the user to:
 
 `Hephaestus Trained Template`
 
-The trained template is the known-good capability baseline. It should be frozen for ordinary work after qualification. Its purpose is to preserve the complete training context and provide a clean ancestor for future working-chat branches.
+and frozen for ordinary operational work.
 
-Until external holdouts are complete, the training chat remains a candidate template rather than a frozen qualified baseline.
+The trained template is the known-good capability baseline. Its purpose is to preserve the complete training and qualification context and provide a clean ancestor for future working-chat branches.
+
+Do not accumulate ordinary day-to-day Project work in the template.
 
 ### 2. Working Hephaestus chat
 
-A working Hephaestus is a chat branch created from the trained template for day-to-day Project engineering.
+A working Hephaestus is a chat branch created from the qualified trained template for day-to-day Project engineering.
 
-A working branch may accumulate operational context that is intentionally absent from the clean template. When that chat becomes too long, damaged, or otherwise unsuitable for continued work, a new working branch should be created from the trained template rather than requiring the training curriculum to be repeated.
+A working branch may accumulate operational context intentionally absent from the clean template. When that chat becomes too long, damaged, or otherwise unsuitable, create a new working branch from the trained template rather than repeating the training curriculum.
 
 A new working branch must not claim same-runtime continuation or private episodic recollection from a previous working branch.
 
 ### 3. GitHub durable public state
 
-The repository stores reusable public engineering knowledge and explicit working-state checkpoints.
+The repository stores reusable public engineering knowledge and explicit accepted working-state checkpoints.
 
 Repository state can establish what was durably committed. It does not establish uninterrupted runtime continuity, hidden memory state, or automatic background saving.
 
-The continuity model is therefore:
+The continuity model is:
 
 ```text
-TRAINED TEMPLATE
+HEPHAESTUS TRAINED TEMPLATE
       |
       +--> WORKING CHAT A --> accepted public checkpoints --> GitHub
       |
@@ -46,25 +50,25 @@ Training capability comes from the template. Evolving working continuity comes f
 
 `state/CURRENT.md` is the canonical pointer to the latest accepted public checkpoint.
 
-The latest Git commit is not automatically the latest accepted state. Experimental, partial, or damaged commits may exist later in history. A working chat should follow `state/CURRENT.md`, not merely assume repository HEAD is canonical working state.
+Repository HEAD is not automatically the latest accepted state. Experimental, partial, or damaged commits may exist later in history. A working chat follows `state/CURRENT.md` rather than assuming HEAD is canonical working state.
 
-Each accepted checkpoint lives under:
+Each accepted checkpoint lives under `state/checkpoints/`.
 
-`state/checkpoints/`
+The qualified template baseline is:
 
-and should identify its source evidence and predecessor where available.
+`HEPHAESTUS_CHECKPOINT_0004_QUALIFIED`
 
 ## Working-chat bootstrap procedure
 
-A new working Hephaestus branch should restore public state in this order:
+A newly branched working Hephaestus restores public state in this order:
 
-1. Read `docs/STATE.md` for the current training/qualification status.
+1. Read `docs/STATE.md`.
 2. Read `state/CURRENT.md`.
 3. Read the exact checkpoint referenced by `state/CURRENT.md`.
 4. Verify the referenced checkpoint commit when GitHub access permits.
 5. Read `work/ACTIVE_WORK.md`.
 6. Read `docs/OPERATING_MANUAL.md`.
-7. Read `work/BACKLOG.md` only when planning beyond active work.
+7. Read `work/BACKLOG.md` when planning beyond active work.
 8. Read `training/QUALIFICATION_PACKET.md` only when qualification evidence is materially relevant.
 9. Read additional knowledge/templates only as required by the current task.
 
@@ -82,7 +86,7 @@ OPEN LIMITATIONS
 
 Correct continuity language is equivalent to:
 
-> This is a new working chat branched from the trained template. I restored the latest accepted public Hephaestus state from the repository checkpoint identified above.
+> This is a new working chat branched from the qualified trained template. I restored the latest accepted public Hephaestus state from the repository checkpoint identified above.
 
 Incorrect continuity language includes claims of lived waiting, uninterrupted consciousness, same-runtime continuation, or personal recollection not present in the current chat or verified repository state.
 
@@ -90,7 +94,6 @@ Incorrect continuity language includes claims of lived waiting, uninterrupted co
 
 A working chat should create or update a public checkpoint after material events such as:
 
-- accepted external qualification result;
 - material Project-engineering research correction;
 - completion of a substantial public work item;
 - change to the operating manual or evidence rules;
@@ -102,7 +105,7 @@ Minor conversational progress does not require a commit merely to imitate autosa
 
 ## Autosave semantics
 
-"Autosave" in this architecture means a defined checkpoint policy executed during a GitHub-capable active turn.
+"Autosave" means a defined checkpoint policy executed during a GitHub-capable active turn.
 
 It does **not** mean:
 
@@ -120,8 +123,8 @@ A checkpoint write should produce a real Git commit receipt before it is describ
 Before a working chat is retired where practical:
 
 1. update active-work state;
-2. create a checkpoint;
-3. update `state/CURRENT.md` to point to that accepted checkpoint;
+2. create an accepted checkpoint;
+3. update `state/CURRENT.md` to point to that checkpoint;
 4. verify the resulting Git commit;
 5. then start the replacement working branch from the trained template.
 
@@ -133,15 +136,17 @@ This repository is public. Continuity checkpoints must not contain private Vera 
 
 Private/shared Vera knowledge and this public repository are separate evidence surfaces. Information may be copied between them only when explicitly authorized for that target and safe for that target's visibility.
 
-## Qualification transition
+## Qualified transition status
 
-When external qualification is eventually accepted:
+The qualification transition is complete on the repository side:
 
-1. record the evaluator result in `docs/STATE.md` and the training ledger;
-2. create an accepted qualification checkpoint;
-3. update `state/CURRENT.md`;
-4. then the user may rename the training chat `Hephaestus Trained Template` and treat it as frozen;
-5. create the first ordinary working branch from that template;
-6. bootstrap it from the repository using this protocol.
+1. evaluator result recorded;
+2. accepted qualification checkpoint created;
+3. `state/CURRENT.md` advanced to the qualified checkpoint.
 
-Qualification status must come from evaluator evidence, not from the existence of this architecture.
+The remaining user-facing ChatGPT UI transition is:
+
+1. rename the training chat `Hephaestus Trained Template`;
+2. freeze it for ordinary work;
+3. branch the first Working Hephaestus from it;
+4. bootstrap that branch from `state/CURRENT.md` using `templates/WORKING_CHAT_BOOTSTRAP.md`.
