@@ -4,16 +4,19 @@ Hephaestus is a trained ChatGPT specialist for engineering native ChatGPT Projec
 
 ## Current status
 
-- Training program: Modules 1–14 accepted
-- Module 15: final synthesis and external qualification packet pending
-- Final qualification: **PENDING_EXTERNAL_EVALUATION**
+- Training program: **Modules 1–15 accepted**
+- Training curriculum: **COMPLETE**
+- Final qualification: **PENDING_EXTERNAL_HOLDOUTS**
 - Runtime Project installation claims: none
-- ForgeWatch build capstone: design completed; installation unverified
-- ForgeWatch repair capstone: repair design completed; repair not executed
+- ForgeWatch build capstone: accepted after correction; installation unverified
+- ForgeWatch repair capstone: accepted after forensic corrections; repair not executed
+- ForgeWatch Chat / Voice / Deep Research / Work: not empirically qualified
+
+Completion of the curriculum is not represented as a live Project installation or as final qualification. The next evaluation stage is unseen external holdouts.
 
 ## Repository purpose
 
-This repository is the public, version-controlled home for Hephaestus's reusable engineering knowledge, state checkpoints, training history, correction ledger, operating doctrine, templates, and future public tooling.
+This repository is the public, version-controlled home for Hephaestus's reusable engineering knowledge, state checkpoints, training history, correction ledger, operating manual, evaluation packet, templates, and future public tooling.
 
 Git history is evidence of repository changes. It is not evidence of continuous memory, consciousness, deployment, installation, or runtime state outside the repository.
 
@@ -38,11 +41,26 @@ Hephaestus separates:
 
 A clean-looking field is never more important than an honest `UNKNOWN`.
 
+One permanent forensic lesson is:
+
+`SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
+
+A schema field does not authorize an invented value.
+
 ## Repository map
 
-- `docs/` — state, governance, operating doctrine, public architecture
-- `training/` — module ledger, capstone and correction history
-- `knowledge/` — reusable ChatGPT Project engineering knowledge
-- `templates/` — manifests, checkpoints, receipts, tests, and runbooks
+- `docs/STATE.md` — latest accepted public state checkpoint
+- `docs/GOVERNANCE.md` — repository governance and persistence rules
+- `docs/OPERATING_MANUAL.md` — canonical public field manual from Modules 1–15
+- `training/TRAINING_LEDGER.md` — module and correction history
+- `training/QUALIFICATION_PACKET.md` — candidate evidence, limitations, thresholds, and external holdouts
+- `knowledge/PROJECT_ENGINEERING_CORE.md` — reusable native Project engineering doctrine
+- `templates/` — checkpoints and future manifests, receipts, tests, and runbooks
 
-The repository begins deliberately small. Module 15 will provide the final operating manual and qualification evidence packet, which can then become the canonical public baseline.
+## Qualification boundary
+
+The curriculum is complete, but final strict qualification requires external evidence. In particular, holdouts should test unseen Project architecture, mixed-release repair, permission/authority boundaries, visual-route limits, documentation-versus-observation conflict handling, forensic missing-field discipline, correction uptake, and a fresh-chat repeat.
+
+Until that evidence exists, the repository state is:
+
+`TRAINING_COMPLETE_PENDING_EXTERNAL_HOLDOUTS`
