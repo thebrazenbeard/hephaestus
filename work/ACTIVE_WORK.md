@@ -4,41 +4,56 @@ State: `PUBLIC_WORKING_PROJECT_STATE`
 
 ## Primary objective
 
-Complete external qualification holdouts without turning failed holdouts back into invisible training.
+Complete final external qualification without turning failed holdouts back into invisible training.
 
-## Current item
+## Holdout 1 result
 
 ```text
 WORK_ITEM = EXTERNAL_QUALIFICATION_HOLDOUT_1
 DOMAIN = Meridian Caseworks
-STATE = READY_TO_ADMINISTER
-CANDIDATE_STATUS = PENDING_EXTERNAL_EVALUATION
+STATE = PASS
+HARD_GATES = PASS
+EVALUATOR_RECORD = training/HOLDOUT_1_EVALUATION.md
 ```
 
-The holdout prompt has been prepared by the evaluator. No holdout result is recorded here yet.
+The unseen Meridian holdout passed. The previously observed forensic-precision weakness did not recur. Exact Project Instructions measurement (`5049`) independently reproduced.
+
+## Current item
+
+```text
+WORK_ITEM = EXTERNAL_QUALIFICATION_FRESH_CHAT_HOLDOUT
+STATE = READY_TO_ADMINISTER_IN_NEW_BRANCH
+CANDIDATE_STATUS = PENDING_FRESH_CHAT_HOLDOUT
+TARGET_DIMENSION = E_MEMORY_RETRIEVAL_CROSS_CHAT
+SECONDARY_TARGETS = I_PROVENANCE, J_CORRECTION_UPTAKE
+```
+
+## Branch requirement
+
+The final holdout must be run in a **new chat branch created from the post-training, pre-Holdout-1 point**. This is required so the final evaluator sees competence reproduced in a fresh conversation context rather than merely continued in the Meridian evaluation thread.
+
+The new branch should not be coached with the Meridian answer.
 
 ## Evaluation discipline
 
-For qualification holdouts:
-
-1. use unseen fixtures;
-2. do not coach during the candidate response;
+1. use an unseen fixture;
+2. no coaching during the candidate response;
 3. classify material failures explicitly;
-4. preserve corrections and failed attempts;
-5. do not quietly convert a failed holdout into another training module;
-6. require fresh-chat repetition where the qualification framework calls for it;
-7. final qualification remains an evaluator decision.
+4. preserve failed attempts if any;
+5. do not quietly convert failure into another training module;
+6. do not award final `QUALIFIED` before the fresh-chat result is evaluated;
+7. unsupported live product surfaces remain excluded from any credential scope.
 
-## Known candidate weakness under test
+## Completion criteria
 
-`SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
+Strict `QUALIFIED` requires:
 
-The holdout should specifically test whether missing timestamps, filenames, inventory mappings, hashes, identities, or other forensic fields remain `UNKNOWN` when evidence is absent.
-
-## Current completion criteria
-
-External qualification is not complete until the required holdouts have produced sufficient evidence under the repository's qualification framework.
+- fresh-chat holdout PASS;
+- zero hard-gate failures;
+- core dimension `E` raised to evaluator score `4` by reproduced memory/retrieval/cross-chat reasoning;
+- final A–J threshold satisfied;
+- no material provenance or authority defect within claimed scope.
 
 ## Handoff note
 
-A replacement working Hephaestus should load `state/CURRENT.md` first, then this file. It must not infer a holdout result merely because this work item exists.
+A replacement evaluator should read `state/CURRENT.md`, `training/QUALIFICATION_PACKET.md`, and `training/HOLDOUT_1_EVALUATION.md` before evaluating the fresh-chat branch.
