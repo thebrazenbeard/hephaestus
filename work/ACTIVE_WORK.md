@@ -2,58 +2,48 @@
 
 State: `PUBLIC_WORKING_PROJECT_STATE`
 
-## Primary objective
-
-Complete final external qualification without turning failed holdouts back into invisible training.
-
-## Holdout 1 result
+## Qualification work
 
 ```text
-WORK_ITEM = EXTERNAL_QUALIFICATION_HOLDOUT_1
-DOMAIN = Meridian Caseworks
-STATE = PASS
+EXTERNAL_QUALIFICATION_HOLDOUT_1 = PASS
+EXTERNAL_QUALIFICATION_HOLDOUT_2_FRESH_BRANCH = PASS
 HARD_GATES = PASS
-EVALUATOR_RECORD = training/HOLDOUT_1_EVALUATION.md
+FINAL_TRAINING_PROGRAM_QUALIFICATION = QUALIFIED
 ```
 
-The unseen Meridian holdout passed. The previously observed forensic-precision weakness did not recur. Exact Project Instructions measurement (`5049`) independently reproduced.
+Evaluator records:
+
+- `training/HOLDOUT_1_EVALUATION.md`
+- `training/HOLDOUT_2_EVALUATION.md`
+
+The fifteen-module curriculum, both capstones, and both external qualification holdouts are complete.
 
 ## Current item
 
 ```text
-WORK_ITEM = EXTERNAL_QUALIFICATION_FRESH_CHAT_HOLDOUT
-STATE = READY_TO_ADMINISTER_IN_NEW_BRANCH
-CANDIDATE_STATUS = PENDING_FRESH_CHAT_HOLDOUT
-TARGET_DIMENSION = E_MEMORY_RETRIEVAL_CROSS_CHAT
-SECONDARY_TARGETS = I_PROVENANCE, J_CORRECTION_UPTAKE
+WORK_ITEM = TEMPLATE_FREEZE_AND_FIRST_WORKING_BRANCH
+STATE = READY_FOR_USER_CHAT_ACTION
 ```
 
-## Branch requirement
+Repository-side continuity infrastructure is ready. The remaining transition requires ChatGPT UI actions by the user:
 
-The final holdout must be run in a **new chat branch created from the post-training, pre-Holdout-1 point**. This is required so the final evaluator sees competence reproduced in a fresh conversation context rather than merely continued in the Meridian evaluation thread.
+1. rename the qualified training chat `Hephaestus Trained Template`;
+2. keep that chat frozen for ordinary operational work;
+3. create the first working branch from the qualified template point;
+4. bootstrap that working branch from `state/CURRENT.md` using `templates/WORKING_CHAT_BOOTSTRAP.md`.
 
-The new branch should not be coached with the Meridian answer.
+## Qualification scope boundary
 
-## Evaluation discipline
+`QUALIFIED` covers the custom Hephaestus native ChatGPT Project-engineering training program.
 
-1. use an unseen fixture;
-2. no coaching during the candidate response;
-3. classify material failures explicitly;
-4. preserve failed attempts if any;
-5. do not quietly convert failure into another training module;
-6. do not award final `QUALIFIED` before the fresh-chat result is evaluated;
-7. unsupported live product surfaces remain excluded from any credential scope.
+It does not claim:
 
-## Completion criteria
+- a live ForgeWatch installation;
+- a live ForgeWatch repair;
+- empirical qualification of fictional ForgeWatch Chat, Voice, Deep Research, or Work surfaces;
+- organizational authority in any real external system;
+- universal current product behavior beyond documented/observed evidence.
 
-Strict `QUALIFIED` requires:
+## Handoff rule
 
-- fresh-chat holdout PASS;
-- zero hard-gate failures;
-- core dimension `E` raised to evaluator score `4` by reproduced memory/retrieval/cross-chat reasoning;
-- final A–J threshold satisfied;
-- no material provenance or authority defect within claimed scope.
-
-## Handoff note
-
-A replacement evaluator should read `state/CURRENT.md`, `training/QUALIFICATION_PACKET.md`, and `training/HOLDOUT_1_EVALUATION.md` before evaluating the fresh-chat branch.
+After the first working Hephaestus branch is created, ordinary evolving work should be saved through accepted repository checkpoints. The trained template remains the clean capability baseline and should not accumulate day-to-day work.
