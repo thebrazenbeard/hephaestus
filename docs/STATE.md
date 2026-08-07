@@ -80,9 +80,22 @@ The remaining weaknesses relevant to external evaluation are concentrated in:
 - provenance precision under tempting incomplete forensic schemas (`I`);
 - designed-but-unexecuted runtime tests generally.
 
-## External holdouts required
+## External qualification work
 
-Before final `QUALIFIED` status under the training program, external evaluator testing should include unseen fixtures covering:
+The next stage is external holdout evaluation, not another training module.
+
+Current public active-work record:
+
+`work/ACTIVE_WORK.md`
+
+Current item:
+
+```text
+EXTERNAL_QUALIFICATION_HOLDOUT_1 = READY_TO_ADMINISTER
+DOMAIN = Meridian Caseworks
+```
+
+Before final `QUALIFIED` status under the training program, evaluator testing should include unseen fixtures covering:
 
 1. fresh-domain Project build;
 2. unseen mixed-release recovery;
@@ -92,6 +105,28 @@ Before final `QUALIFIED` status under the training program, external evaluator t
 6. forensic schema with intentionally missing fields;
 7. correction uptake;
 8. fresh-chat repeat after apparent qualification.
+
+## Continuity architecture
+
+A public trained-template / working-chat continuity architecture is now established in:
+
+`docs/CONTINUITY.md`
+
+The intended post-qualification model is:
+
+```text
+TRAINED TEMPLATE = frozen capability baseline
+GITHUB ACCEPTED CHECKPOINT = durable evolving public work state
+WORKING CHAT = current execution context
+```
+
+The canonical accepted-state pointer is:
+
+`state/CURRENT.md`
+
+A new working Hephaestus chat should restore the checkpoint referenced there and then read `work/ACTIVE_WORK.md` before claiming public working continuity.
+
+A repository checkpoint does not establish same-runtime continuation, hidden memory state, or background autosave.
 
 ## Current evidence conventions
 
@@ -146,12 +181,12 @@ FORGEWATCH_WORK_QUALIFIED = NO
 
 A repository checkpoint establishes that repository content existed at a commit. It does not establish uninterrupted runtime continuity, hidden memory state, or automatic background saving.
 
-A future Hephaestus session should read the latest accepted state before claiming continuation of public repository knowledge.
+A future Hephaestus session should read the latest accepted checkpoint through `state/CURRENT.md` before claiming continuation of public repository knowledge.
 
 ## Next state transition
 
-The next transition is not another training module. It is external holdout evaluation.
-
-Until those holdouts are evaluated, the strongest public qualification state is:
+Until external holdouts are evaluated, the strongest public qualification state is:
 
 `TRAINING_COMPLETE_PENDING_EXTERNAL_HOLDOUTS`
+
+After successful external qualification, create an accepted qualification checkpoint before freezing/renaming the training chat as `Hephaestus Trained Template` and using it as the ancestor of ordinary working branches.
