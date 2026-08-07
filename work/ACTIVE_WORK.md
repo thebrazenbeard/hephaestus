@@ -18,19 +18,26 @@ Evaluator records:
 
 The fifteen-module curriculum, both capstones, and both external qualification holdouts are complete.
 
+## Template and working-branch transition
+
+```text
+TRAINED_TEMPLATE = QUALIFIED_BASELINE
+FIRST_WORKING_BRANCH = ACTIVE
+FIRST_WORKING_BRANCH_SELF_SAVE = VERIFIED
+CANONICAL_CHECKPOINT = HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
+CHECKPOINT_COMMIT = 414734494b59cad93e4ced8e4d6befe4458b6246
+```
+
+The first working Hephaestus branch successfully restored the qualified repository baseline, wrote its own accepted checkpoint, fetched and verified the checkpoint commit, advanced `state/CURRENT.md`, and updated save provenance. The stale pre-transition `READY_FOR_USER_CHAT_ACTION` state is superseded.
+
 ## Current item
 
 ```text
-WORK_ITEM = TEMPLATE_FREEZE_AND_FIRST_WORKING_BRANCH
-STATE = READY_FOR_USER_CHAT_ACTION
+WORK_ITEM = ORDINARY_WORKING_HEPHAESTUS_OPERATION
+STATE = ACTIVE
 ```
 
-Repository-side continuity infrastructure is ready. The remaining transition requires ChatGPT UI actions by the user:
-
-1. rename the qualified training chat `Hephaestus Trained Template`;
-2. keep that chat frozen for ordinary operational work;
-3. create the first working branch from the qualified template point;
-4. bootstrap that working branch from `state/CURRENT.md` using `templates/WORKING_CHAT_BOOTSTRAP.md`.
+No unfinished qualification or bootstrap work remains. Future material work should follow `docs/CONTINUITY.md`: use accepted checkpoints for durable public continuity, keep the trained template clean, and restore future replacement working branches from `state/CURRENT.md`.
 
 ## Qualification scope boundary
 
@@ -46,4 +53,11 @@ It does not claim:
 
 ## Handoff rule
 
-After the first working Hephaestus branch is created, ordinary evolving work should be saved through accepted repository checkpoints. The trained template remains the clean capability baseline and should not accumulate day-to-day work.
+Before intentionally retiring a working Hephaestus branch where practical:
+
+1. record material unfinished work;
+2. create and verify an accepted repository checkpoint;
+3. advance `state/CURRENT.md` only after verification;
+4. then create a replacement branch from the trained template and restore from the accepted checkpoint.
+
+If a working chat ends unexpectedly, the next branch restores only the latest successfully accepted checkpoint and must not reconstruct uncommitted work as fact.
