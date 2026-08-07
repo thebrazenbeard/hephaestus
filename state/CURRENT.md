@@ -4,16 +4,16 @@ This file points to the latest **accepted** public Hephaestus checkpoint. Reposi
 
 ```yaml
 current_checkpoint:
-  checkpoint_id: HEPHAESTUS_CHECKPOINT_0006_CONTINUITY_SYNC
-  path: state/checkpoints/CHECKPOINT_0006_CONTINUITY_SYNC.md
-  checkpoint_commit: 51a66f08e03a2269ee62c1ac97aab34ad4425c78
+  checkpoint_id: HEPHAESTUS_CHECKPOINT_0007_PR_WORKFLOW
+  path: state/checkpoints/CHECKPOINT_0007_PR_WORKFLOW.md
+  checkpoint_commit: 74ecc16cde32969b22d0c4cce20d2cf4e2dc6761
   status: ACCEPTED_PUBLIC_STATE
   writer_class: HEPHAESTUS_WORKING_CHAT
 
 previous_checkpoint:
-  checkpoint_id: HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
-  path: state/checkpoints/CHECKPOINT_0005_FIRST_WORKING_BRANCH.md
-  checkpoint_commit: 414734494b59cad93e4ced8e4d6befe4458b6246
+  checkpoint_id: HEPHAESTUS_CHECKPOINT_0006_CONTINUITY_SYNC
+  path: state/checkpoints/CHECKPOINT_0006_CONTINUITY_SYNC.md
+  checkpoint_commit: 51a66f08e03a2269ee62c1ac97aab34ad4425c78
   writer_class: HEPHAESTUS_WORKING_CHAT
 
 qualified_baseline:
@@ -34,6 +34,7 @@ working_branch_state: FIRST_WORKING_BRANCH_ACTIVE
 
 active_work: work/ACTIVE_WORK.md
 backlog: work/BACKLOG.md
+contribution_guidance: CONTRIBUTING.md
 qualification_packet: training/QUALIFICATION_PACKET.md
 holdout_1_evaluation: training/HOLDOUT_1_EVALUATION.md
 holdout_2_evaluation: training/HOLDOUT_2_EVALUATION.md
@@ -46,9 +47,9 @@ bootstrap_template: templates/WORKING_CHAT_BOOTSTRAP.md
 
 A new working Hephaestus chat should read this pointer, then the referenced checkpoint, then `state/SAVE_PROVENANCE.md`, then `work/ACTIVE_WORK.md`, before claiming restored public working continuity.
 
-The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` remains evaluator/admin-written historical provenance. `HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH` remains the first checkpoint written and commit-verified by a working Hephaestus turn. `HEPHAESTUS_CHECKPOINT_0006_CONTINUITY_SYNC` is the latest accepted working-chat checkpoint and synchronizes the continuity, active-work, and backlog records after that transition.
+The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` remains evaluator/admin-written historical provenance. `HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH` remains the first checkpoint written and commit-verified by a working Hephaestus turn. `HEPHAESTUS_CHECKPOINT_0007_PR_WORKFLOW` is the latest accepted working-chat checkpoint and records the establishment and successful exercise of the branch/pull-request workflow for material repository changes.
 
-If this pointer conflicts with a later experimental or housekeeping commit, this pointer controls until an explicitly accepted checkpoint replaces it.
+If this pointer conflicts with a later experimental, merged, or housekeeping commit, this pointer controls until an explicitly accepted checkpoint replaces it.
 
 ## Qualification boundary
 
