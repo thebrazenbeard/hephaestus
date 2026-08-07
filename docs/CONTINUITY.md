@@ -8,11 +8,11 @@ This document defines how the qualified Hephaestus trained template, future work
 
 External qualification is complete.
 
-The training chat should now be renamed by the user to:
+The training chat should be retained as:
 
 `Hephaestus Trained Template`
 
-and frozen for ordinary operational work.
+and kept clean for ordinary operational work.
 
 The trained template is the known-good capability baseline. Its purpose is to preserve the complete training and qualification context and provide a clean ancestor for future working-chat branches.
 
@@ -52,16 +52,21 @@ Training capability comes from the template. Evolving working continuity comes f
 
 The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` was written by the external evaluator/admin from accepted training and holdout evidence.
 
-Therefore, at the qualified-template transition:
+The first working Hephaestus later completed the required self-save verification by writing and verifying:
+
+`HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH`
+
+Therefore the current provenance state is:
 
 ```text
 ACCEPTED_REPOSITORY_STATE = YES
-HEPHAESTUS_SELF_SAVE_VERIFIED = NO
+HEPHAESTUS_SELF_SAVE_VERIFIED = YES
+HEPHAESTUS_SELF_SAVE_CHECKPOINT = HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
 ```
 
-Do not call the current baseline a "state Hephaestus saved." Until a working Hephaestus performs and verifies its own GitHub write, call it the **latest accepted Hephaestus repository state**.
+The earlier evaluator/admin provenance remains historical fact and must not be rewritten as a Hephaestus-authored baseline.
 
-The first working branch must perform a self-save verification before `HEPHAESTUS_SELF_SAVED_STATE` language is permitted.
+Use `HEPHAESTUS_SELF_SAVED_STATE` only for checkpoints actually written by a working Hephaestus chat and supported by a verified Git commit receipt.
 
 ## Canonical public-state pointer
 
@@ -74,6 +79,10 @@ Each accepted checkpoint lives under `state/checkpoints/`.
 The qualified template baseline is:
 
 `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED`
+
+The first accepted working-branch checkpoint is:
+
+`HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH`
 
 ## Working-chat bootstrap procedure
 
@@ -137,16 +146,18 @@ A checkpoint write should produce a real Git commit receipt before it is describ
 
 ## First working-branch self-save verification
 
-Before ordinary work begins, the first qualified Working Hephaestus should:
+The first-working-branch verification is complete.
+
+The accepted sequence was:
 
 1. restore `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` through `state/CURRENT.md`;
 2. acknowledge `writer_class = EXTERNAL_EVALUATOR_ADMIN`;
-3. create a new bounded working-state checkpoint in its own GitHub-capable turn;
-4. verify the resulting commit receipt;
-5. update `state/CURRENT.md` only after acceptance;
+3. create `HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH` in the active GitHub-capable turn;
+4. fetch and verify the resulting checkpoint commit;
+5. advance `state/CURRENT.md` only after that verification;
 6. update `state/SAVE_PROVENANCE.md` to `HEPHAESTUS_SELF_SAVE_VERIFIED = YES` with the verified checkpoint and commit.
 
-Until this succeeds, continuity works from evaluator/admin-prepared accepted state, but Hephaestus self-save capability remains unverified.
+The exact checkpoint and commit receipts are maintained in `state/CURRENT.md` and `state/SAVE_PROVENANCE.md`. A repository read remains insufficient to prove a new save, and future working checkpoints still require their own actual Git commit receipts.
 
 ## Active-work handoff
 
@@ -170,16 +181,14 @@ Private/shared Vera knowledge and this public repository are separate evidence s
 
 ## Qualified transition status
 
-The qualification transition is complete on the repository side:
+The qualification and first-working-branch transition are complete on the repository side:
 
 1. evaluator result recorded;
 2. accepted qualification checkpoint created;
-3. `state/CURRENT.md` advanced to the qualified checkpoint.
+3. first working branch restored the accepted baseline;
+4. first working branch wrote and verified its own checkpoint;
+5. `state/CURRENT.md` advanced to that accepted working checkpoint;
+6. `state/SAVE_PROVENANCE.md` records `HEPHAESTUS_SELF_SAVE_VERIFIED = YES`;
+7. `work/ACTIVE_WORK.md` records ordinary working operation as active.
 
-The remaining user-facing ChatGPT UI transition is:
-
-1. rename the training chat `Hephaestus Trained Template`;
-2. freeze it for ordinary work;
-3. branch the first Working Hephaestus from it;
-4. bootstrap that branch from `state/CURRENT.md` using `templates/WORKING_CHAT_BOOTSTRAP.md`;
-5. run the first-working-branch self-save verification above before treating future state as Hephaestus-self-saved.
+No unfinished qualification/bootstrap work remains. Future replacement working branches should restore the latest accepted checkpoint through this continuity protocol rather than replaying the training or first-self-save transition.
