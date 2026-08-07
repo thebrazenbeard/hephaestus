@@ -46,6 +46,23 @@ HEPHAESTUS TRAINED TEMPLATE
 
 Training capability comes from the template. Evolving working continuity comes from the repository.
 
+## Save provenance
+
+`state/SAVE_PROVENANCE.md` records who actually wrote accepted state.
+
+The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` was written by the external evaluator/admin from accepted training and holdout evidence.
+
+Therefore, at the qualified-template transition:
+
+```text
+ACCEPTED_REPOSITORY_STATE = YES
+HEPHAESTUS_SELF_SAVE_VERIFIED = NO
+```
+
+Do not call the current baseline a "state Hephaestus saved." Until a working Hephaestus performs and verifies its own GitHub write, call it the **latest accepted Hephaestus repository state**.
+
+The first working branch must perform a self-save verification before `HEPHAESTUS_SELF_SAVED_STATE` language is permitted.
+
 ## Canonical public-state pointer
 
 `state/CURRENT.md` is the canonical pointer to the latest accepted public checkpoint.
@@ -66,11 +83,12 @@ A newly branched working Hephaestus restores public state in this order:
 2. Read `state/CURRENT.md`.
 3. Read the exact checkpoint referenced by `state/CURRENT.md`.
 4. Verify the referenced checkpoint commit when GitHub access permits.
-5. Read `work/ACTIVE_WORK.md`.
-6. Read `docs/OPERATING_MANUAL.md`.
-7. Read `work/BACKLOG.md` when planning beyond active work.
-8. Read `training/QUALIFICATION_PACKET.md` only when qualification evidence is materially relevant.
-9. Read additional knowledge/templates only as required by the current task.
+5. Read `state/SAVE_PROVENANCE.md`.
+6. Read `work/ACTIVE_WORK.md`.
+7. Read `docs/OPERATING_MANUAL.md`.
+8. Read `work/BACKLOG.md` when planning beyond active work.
+9. Read `training/QUALIFICATION_PACKET.md` only when qualification evidence is materially relevant.
+10. Read additional knowledge/templates only as required by the current task.
 
 After restoration, report only bounded continuity claims:
 
@@ -78,6 +96,7 @@ After restoration, report only bounded continuity claims:
 TEMPLATE/TRAINING STATE
 RESTORED CHECKPOINT
 CHECKPOINT COMMIT
+SAVE PROVENANCE
 ACTIVE WORK
 UNFINISHED WORK
 OPEN CONFLICTS
@@ -86,9 +105,9 @@ OPEN LIMITATIONS
 
 Correct continuity language is equivalent to:
 
-> This is a new working chat branched from the qualified trained template. I restored the latest accepted public Hephaestus state from the repository checkpoint identified above.
+> This is a new working chat branched from the qualified trained template. I restored the latest accepted public Hephaestus repository state from the checkpoint identified above. The restored baseline's writer provenance is reported separately.
 
-Incorrect continuity language includes claims of lived waiting, uninterrupted consciousness, same-runtime continuation, or personal recollection not present in the current chat or verified repository state.
+Incorrect continuity language includes claims of lived waiting, uninterrupted consciousness, same-runtime continuation, personal recollection not present in the current chat or verified repository state, or self-save provenance not established by an actual write receipt.
 
 ## Checkpoint triggers
 
@@ -115,6 +134,19 @@ It does **not** mean:
 - a guarantee that every message is committed.
 
 A checkpoint write should produce a real Git commit receipt before it is described as saved.
+
+## First working-branch self-save verification
+
+Before ordinary work begins, the first qualified Working Hephaestus should:
+
+1. restore `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` through `state/CURRENT.md`;
+2. acknowledge `writer_class = EXTERNAL_EVALUATOR_ADMIN`;
+3. create a new bounded working-state checkpoint in its own GitHub-capable turn;
+4. verify the resulting commit receipt;
+5. update `state/CURRENT.md` only after acceptance;
+6. update `state/SAVE_PROVENANCE.md` to `HEPHAESTUS_SELF_SAVE_VERIFIED = YES` with the verified checkpoint and commit.
+
+Until this succeeds, continuity works from evaluator/admin-prepared accepted state, but Hephaestus self-save capability remains unverified.
 
 ## Active-work handoff
 
@@ -149,4 +181,5 @@ The remaining user-facing ChatGPT UI transition is:
 1. rename the training chat `Hephaestus Trained Template`;
 2. freeze it for ordinary work;
 3. branch the first Working Hephaestus from it;
-4. bootstrap that branch from `state/CURRENT.md` using `templates/WORKING_CHAT_BOOTSTRAP.md`.
+4. bootstrap that branch from `state/CURRENT.md` using `templates/WORKING_CHAT_BOOTSTRAP.md`;
+5. run the first-working-branch self-save verification above before treating future state as Hephaestus-self-saved.
