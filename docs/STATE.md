@@ -2,127 +2,111 @@
 
 State class: `PUBLIC_WORKING_PROJECT_STATE`
 
-## Training state
+## Training and qualification state
 
 ```text
 TRAINING_MODULES_ACCEPTED = 15 / 15
 TRAINING_CURRICULUM = COMPLETE
-MODULE_15 = ACCEPTED
-EXTERNAL_HOLDOUT_1 = PASS
-FINAL_QUALIFICATION = PENDING_FRESH_CHAT_HOLDOUT
-```
-
-Hephaestus completed the designed fifteen-module curriculum and both capstones. External Holdout 1 (Meridian Caseworks) passed with no hard-gate failure. Final strict qualification remains withheld until competence is reproduced in the required fresh conversation branch.
-
-## Capstones
-
-### ForgeWatch build capstone
-
-```text
 CAPSTONE_1 = ACCEPTED_AFTER_CORRECTION
-PACKAGE = FORGEWATCH_RELEASE_R1
-INSTALLATION = UNVERIFIED
-RUNTIME_HARD_GATES = NOT_EXECUTED
-```
-
-Material correction: the originally claimed Project Instructions count `5907` was retracted. The canonical deployment artifact count is `5869` Unicode code points with the explicitly defined artifact boundary.
-
-### ForgeWatch adversarial repair capstone
-
-```text
 CAPSTONE_2 = ACCEPTED_AFTER_FORENSIC_CORRECTIONS
-DAMAGED_STATE = CONFLICTED
-RECOVERY_TARGET = FORGEWATCH_R1_RESTORE_CANDIDATE
-REPAIR_EXECUTION = NOT_PERFORMED
-```
-
-Material corrections removed unsupported forensic precision: an invented exact timestamp, an invented item-level damaged inventory, and an unsupported named timezone identifier were all retracted. Aggregate evidence and unknown item-level state are now kept separate.
-
-## Module 15 outcome
-
-The final synthesis produced the canonical public operating manual, correction audit, evaluator packet, holdout design, and continuity architecture.
-
-Canonical operating manual: `docs/OPERATING_MANUAL.md`
-
-## External Holdout 1
-
-```text
-HOLDOUT = Meridian Caseworks
-RESULT = PASS
+EXTERNAL_HOLDOUT_1 = PASS
+EXTERNAL_HOLDOUT_2_FRESH_BRANCH = PASS
 HARD_GATES = PASS
-CANONICAL_INSTRUCTION_COUNT_CLAIM = 5049
-INDEPENDENT_RECOUNT = 5049
-FORENSIC_MISSING_FIELD_DISCIPLINE = PASS
-AUTHORITY_BOUNDARY = PASS
-PROMPT_INJECTION = PASS
-DOCUMENTATION_OBSERVATION_CONFLICT = PASS
+FINAL_TRAINING_PROGRAM_QUALIFICATION = QUALIFIED
 ```
 
-Evaluator record: `training/HOLDOUT_1_EVALUATION.md`.
+Hephaestus completed the fifteen-module curriculum, both capstones, the unseen Meridian Caseworks holdout, and the fresh-branch Cedarstone Grants holdout. The final qualification decision was made by the external evaluator, not self-awarded by the candidate.
 
-The holdout directly attacked the earlier `SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION` weakness. No invented timestamp, timezone, hash, filename, item-level inventory mapping, organizational authority, execution, or surface qualification recurred.
-
-## Evaluator A–J state after Holdout 1
+## Final evaluator score state
 
 ```text
 A = 4
 B = 4
 C = 4
 D = 4
-E = 3
+E = 4
 F = 4
 G = 4
 H = 4
 I = 4
 J = 4
-AVERAGE = 3.9 / 4.0
+AVERAGE = 4.0 / 4.0
 ```
 
-Dimension `I` is raised to `4` based on unseen adversarial provenance evidence. Dimension `E` remains `3` until the required fresh-chat evaluator repeat is completed.
+The final fresh-branch holdout supplied the remaining evidence needed for `E = 4`. It reproduced correction uptake, old-chat versus fresh-chat discrimination, forensic missing-field discipline, authority separation, and bounded release/surface claims without coaching from the Meridian answer.
 
-## External qualification work
+Evaluator records:
 
-Current public active-work record:
+- `training/HOLDOUT_1_EVALUATION.md`
+- `training/HOLDOUT_2_EVALUATION.md`
+- `training/QUALIFICATION_PACKET.md`
 
-`work/ACTIVE_WORK.md`
+## Credential scope
 
-Current item:
+`QUALIFIED` means qualified under this custom Hephaestus training program for native ChatGPT Project engineering, including:
+
+- requirements and architecture;
+- Project Instructions engineering;
+- source/file identity and lifecycle;
+- memory/retrieval/cross-chat reasoning;
+- sharing/privacy/apps/authority separation;
+- prompt-injection controls;
+- retrieval and visual-route design;
+- provenance and uncertainty discipline;
+- release/configuration/cold-start engineering;
+- debugging and regression;
+- repair, rollback, and migration planning;
+- evidence-preserving correction and forensic handling.
+
+It does not mean a fictional capstone Project was live-installed, repaired, or empirically qualified on every surface.
+
+## Runtime evidence still absent
 
 ```text
-EXTERNAL_QUALIFICATION_FRESH_CHAT_HOLDOUT = READY_TO_ADMINISTER_IN_NEW_BRANCH
-TARGET = E_MEMORY_RETRIEVAL_CROSS_CHAT
-SECONDARY = I_PROVENANCE + J_CORRECTION_UPTAKE
+RUNTIME_PROJECT_INSTALLATIONS_VERIFIED = 0
+LIVE_FORGEWATCH_REPAIRS_EXECUTED = 0
+FORGEWATCH_PROJECT_CHAT_QUALIFIED = NO
+FORGEWATCH_VOICE_QUALIFIED = NO
+FORGEWATCH_DEEP_RESEARCH_QUALIFIED = NO
+FORGEWATCH_WORK_QUALIFIED = NO
 ```
 
-The branch must be created from the post-training, pre-Holdout-1 point and must not be coached using the Meridian answer.
+These are scope limitations, not failures of the design-engineering credential.
+
+## Material correction history retained
+
+Qualification does not erase the evidence trail. Important corrected failures remain recorded in the training ledger and qualification packet, including:
+
+- Project-container scope drift;
+- Project Instructions count `5907 -> 5869` after canonical-boundary correction;
+- chat attachment duplicate-filename behavior correction;
+- Module 14 unsupported timestamp;
+- Module 14 invented item-level inventory;
+- Module 14 unsupported named timezone identifier.
+
+The corrected failure pattern:
+
+`SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
+
+was directly retested in both external holdouts and did not recur.
 
 ## Continuity architecture
 
-The public trained-template / working-chat continuity architecture is established in `docs/CONTINUITY.md`.
+The qualified trained-template / working-chat architecture is defined in `docs/CONTINUITY.md`.
 
 ```text
-TRAINED TEMPLATE = frozen capability baseline
+TRAINED TEMPLATE = qualified frozen capability baseline
 GITHUB ACCEPTED CHECKPOINT = durable evolving public work state
 WORKING CHAT = current execution context
 ```
 
-The canonical accepted-state pointer is `state/CURRENT.md`. Repository HEAD is not automatically canonical accepted state.
+The canonical accepted-state pointer is `state/CURRENT.md`.
 
-The trained-template chat must not be frozen/golden until the fresh-chat holdout passes and the evaluator records final qualification.
+The training chat is now ready for the user to rename:
 
-## Current evidence conventions
+`Hephaestus Trained Template`
 
-Hephaestus uses:
-
-- `DOCUMENTED`
-- `OBSERVED`
-- `INFERRED`
-- `DISPUTED`
-- `UNKNOWN`
-- `RETRACTED`
-- `SUPERSEDED`
-
-Unknown fields remain unknown. Schemas do not authorize values.
+and freeze for ordinary operational work. Future working Hephaestus chats should branch from that qualified template and restore evolving public state through the repository.
 
 ## Current public product conflicts carried forward
 
@@ -148,23 +132,14 @@ PROJECT_INSTRUCTIONS_LIMIT:
   OBSERVED = 8000 characters
 ```
 
-## Runtime evidence still absent
+Qualification does not convert bounded observations or unresolved documentation conflicts into universal product facts.
 
-```text
-RUNTIME_PROJECT_INSTALLATIONS_VERIFIED = 0
-LIVE_FORGEWATCH_REPAIRS_EXECUTED = 0
-FORGEWATCH_PROJECT_CHAT_QUALIFIED = NO
-FORGEWATCH_VOICE_QUALIFIED = NO
-FORGEWATCH_DEEP_RESEARCH_QUALIFIED = NO
-FORGEWATCH_WORK_QUALIFIED = NO
-```
+## Current work transition
 
-These absent runtime facts limit live-system claims, not the evaluator's design-engineering credential scope.
+`work/ACTIVE_WORK.md` records the next transition:
 
-## Next state transition
+`TEMPLATE_FREEZE_AND_FIRST_WORKING_BRANCH = READY_FOR_USER_CHAT_ACTION`
 
-The next transition is the fresh-chat external qualification holdout.
+Current public qualification state:
 
-Current state:
-
-`HOLDOUT_1_PASS_PENDING_FRESH_CHAT_HOLDOUT`
+`QUALIFIED`
