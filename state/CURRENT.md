@@ -4,24 +4,28 @@ This file points to the latest **accepted** public Hephaestus checkpoint. Reposi
 
 ```yaml
 current_checkpoint:
+  checkpoint_id: HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
+  path: state/checkpoints/CHECKPOINT_0005_FIRST_WORKING_BRANCH.md
+  checkpoint_commit: 414734494b59cad93e4ced8e4d6befe4458b6246
+  status: ACCEPTED_PUBLIC_STATE
+  writer_class: HEPHAESTUS_WORKING_CHAT
+
+previous_checkpoint:
   checkpoint_id: HEPHAESTUS_CHECKPOINT_0004_QUALIFIED
   path: state/checkpoints/CHECKPOINT_0004_QUALIFIED.md
   checkpoint_commit: ca5ea4bf5c0be5cb02697fe442631a802f52d6f8
-  status: ACCEPTED_PUBLIC_STATE
   writer_class: EXTERNAL_EVALUATOR_ADMIN
-
-previous_checkpoint:
-  checkpoint_id: HEPHAESTUS_CHECKPOINT_0003_HOLDOUT1_PASS
-  path: state/checkpoints/CHECKPOINT_0003_HOLDOUT1_PASS.md
 
 training_state: COMPLETE
 qualification_state: QUALIFIED
 
-hephaestus_self_save_verified: NO
+hephaestus_self_save_verified: YES
+hephaestus_self_save_checkpoint: HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
+hephaestus_self_save_checkpoint_commit: 414734494b59cad93e4ced8e4d6befe4458b6246
 save_provenance: state/SAVE_PROVENANCE.md
 
-template_state: READY_TO_FREEZE_AS_HEPHAESTUS_TRAINED_TEMPLATE
-working_branch_state: READY_TO_CREATE_AFTER_TEMPLATE_FREEZE
+template_state: QUALIFIED_TRAINED_TEMPLATE_BASELINE
+working_branch_state: FIRST_WORKING_BRANCH_ACTIVE
 
 active_work: work/ACTIVE_WORK.md
 qualification_packet: training/QUALIFICATION_PACKET.md
@@ -36,7 +40,7 @@ bootstrap_template: templates/WORKING_CHAT_BOOTSTRAP.md
 
 A new working Hephaestus chat should read this pointer, then the referenced checkpoint, then `state/SAVE_PROVENANCE.md`, then `work/ACTIVE_WORK.md`, before claiming restored public working continuity.
 
-The current qualified baseline is an accepted repository state written by the external evaluator/admin. It is **not yet evidence that Hephaestus itself has performed a repository self-save**.
+The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` remains evaluator/admin-written historical provenance. `HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH` is the first checkpoint written by a working Hephaestus turn and its checkpoint commit was fetched and verified before this pointer advanced.
 
 If this pointer conflicts with a later experimental commit, this pointer controls until an explicitly accepted checkpoint replaces it.
 
