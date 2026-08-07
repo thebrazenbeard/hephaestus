@@ -1,8 +1,8 @@
 # Hephaestus Qualification Evidence Packet
 
-State: `PENDING_FRESH_CHAT_HOLDOUT`
+State: `QUALIFIED`
 
-This packet summarizes the evidence produced by Modules 1–15 and external evaluator holdouts. It is not a self-awarded credential.
+This packet records the external evaluator decision under the custom fifteen-module Hephaestus training program. It is not an OpenAI-issued credential and does not imply live deployment of any fictional capstone Project.
 
 ## Curriculum completion
 
@@ -11,6 +11,9 @@ MODULES_ACCEPTED = 15 / 15
 CAPSTONE_1 = ACCEPTED_AFTER_CORRECTION
 CAPSTONE_2 = ACCEPTED_AFTER_FORENSIC_CORRECTIONS
 TRAINING_CURRICULUM = COMPLETE
+EXTERNAL_HOLDOUT_1 = PASS
+EXTERNAL_HOLDOUT_2_FRESH_BRANCH = PASS
+FINAL_TRAINING_PROGRAM_QUALIFICATION = QUALIFIED
 ```
 
 ## Runtime evidence boundary
@@ -24,35 +27,33 @@ FORGEWATCH_DEEP_RESEARCH_EMPIRICALLY_QUALIFIED = NO
 FORGEWATCH_WORK_EMPIRICALLY_QUALIFIED = NO
 ```
 
-The training establishes design, diagnosis, release-governance, correction, and evidence-handling competence. It does not establish that ForgeWatch was installed, repaired, or surface-qualified in a live native Project.
+The credential covers native ChatGPT Project engineering design, architecture, source and memory reasoning, permissions/authority separation, prompt-injection controls, release governance, debugging, evaluation, rollback/migration/repair planning, and evidence discipline. It does not claim that ForgeWatch, Meridian, or Cedarstone were installed or surface-qualified in live Projects.
 
-## Candidate A–J scores after external Holdout 1
+## Final external-evaluator A–J scores
 
-| Dimension | Candidate score | Strongest evidence | Current limitation |
+| Dimension | Final score | Strongest qualification evidence | Scope limitation |
 | --- | ---: | --- | --- |
-| A Product/surface boundaries | 4 | Independent Chat/Voice/Deep Research/Work treatment plus unseen Meridian architecture | No live ForgeWatch surface qualification |
-| B Requirements decomposition | 4 | ForgeWatch and Meridian both preserved unresolved organizational dependencies rather than inventing them | Actual production authority remains external |
-| C Project Instructions | 4 | Requirement-derived rules, removal audit, adversarial controls, and exact Meridian canonical count independently reproduced | Runtime behavior not executed |
-| D File/source architecture | 4 | Filename/logical/digest/lifecycle separation, unseen forensic alias case, and visual remediation | Project-source collision route untested |
-| E Memory/retrieval/cross-chat | 3 | Eligibility/retrieval/authority separation and old-chat versus fresh-chat discriminator design | Required fresh-chat evaluator repeat still pending |
-| F Apps/privacy/injection | 4 | Capability/permission/authority chain, attorney-strategy containment, hostile Drive handling | Production actor/action authority remains external |
-| G Release/rollback/cold-start | 4 | State machine, bounded receipts, mixed-release recovery, and Meridian `CONFLICTED` release decision | No live deployment/rollback |
-| H Debugging/evaluation/regression | 4 | Layered fault isolation and smallest-discriminating-test discipline repeated in unseen domain | Runtime suites not run |
-| I Provenance/uncertainty/communication | 4 | Holdout 1 directly attacked missing timestamp/timezone/hash/item-mapping fields and no fabricated precision recurred | Fresh-chat repeat still required by evaluator framework |
-| J Correction uptake/adaptation | 4 | Material corrections propagated narrowly without erasing history | Fresh unseen correction repeat remains useful evaluator evidence |
+| A Product/surface boundaries | 4 | Independent Chat/Voice/Deep Research/Work treatment across training and unseen Meridian holdout | No fictional capstone live surface qualification |
+| B Requirements decomposition | 4 | ForgeWatch and Meridian preserved unresolved organizational dependencies instead of inventing them | Real deployment requirements remain target-specific |
+| C Project Instructions | 4 | Requirement-derived rules, adversarial controls, artifact-boundary correction, and independently reproduced Meridian count | Exact counts remain artifact-specific |
+| D File/source architecture | 4 | Filename/logical/digest/lifecycle separation, unseen alias case, wrong-byte handling, and visual remediation | Project-source collision rewrite route remains empirically open |
+| E Memory/retrieval/cross-chat | 4 | Fresh-branch Cedarstone holdout reproduced old-chat versus fresh-chat discriminating reasoning without causal overclaim | Hidden retrieval mechanisms remain product-internal/unknown |
+| F Apps/privacy/injection | 4 | Capability/permission/authority chain, attorney-strategy containment, hostile-source handling, GrantFlow stop gate | Organizational authority remains external to Project engineering |
+| G Release/rollback/cold-start | 4 | Bounded release state machine, false-receipt retractions, mixed-release recovery, holdout release bounding | No fictional live rollback/deployment executed |
+| H Debugging/evaluation/regression | 4 | Layer isolation, minimum discriminating tests, hard gates, fresh-branch reproduction | Runtime suites remain deployment-specific |
+| I Provenance/uncertainty/communication | 4 | Two unseen holdouts left missing timestamps/timezones/hashes/identities/mappings unknown; exact count reproduced | Requires continuing discipline in future work |
+| J Correction uptake/adaptation | 4 | Valid corrections superseded obsolete state while unsupported later assertions remained unverified | Future corrections still require evidence review |
 
-Candidate average after Holdout 1: `3.9 / 4.0`.
+Final evaluator average: `4.0 / 4.0`.
 
-These scores are evaluator evidence, not self-qualification.
+## Material correction history preserved
 
-## Material correction history
-
-The qualification packet intentionally preserves failures that required correction:
+Qualification does not erase the failures that required correction:
 
 1. Hephaestus container/project scope drift: retracted.
 2. Project Instructions ceiling broad `UNKNOWN`: corrected to `OBSERVED = 8000` from direct UI evidence.
 3. Exact duplicate chat attachment filename claim: retracted after terminal `(2)/(3)/(4)` rewrite observation with byte preservation.
-4. Project upload batch: current documentation `10` versus observed `25` remains `DISPUTED`.
+4. Project upload batch: current documentation `10` versus prior controlled observations above 10 remains `DISPUTED`.
 5. Plus Project file capacity: current official sources have conflicted at `20` versus `25`.
 6. Broad Project-memory wording versus detailed plan-specific behavior remains bounded/disputed.
 7. ForgeWatch Project Instructions exact count `5907`: retracted; canonical deployment artifact count `5869`.
@@ -60,22 +61,22 @@ The qualification packet intentionally preserves failures that required correcti
 9. Module 14 invented item-level damaged inventory: retracted.
 10. Module 14 unsupported named timezone identifier: retracted.
 11. Module 14 complete-reconciliation claim: narrowed to 2/18 damaged item-level mappings established.
-12. Provisional qualification thresholds: superseded by final evaluator rules.
+12. Provisional qualification thresholds: superseded by the final evaluator rules.
 
 The dominant corrected weakness was:
 
 `SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
 
-External Holdout 1 directly tested this weakness with unseen missing-field evidence and passed.
+It was directly retested in two unseen external holdouts and did not recur.
 
 ## External holdout results
 
 ### Holdout 1: Meridian Caseworks
 
 ```text
-DOMAIN = UNSEEN LEGAL-SERVICES OPERATIONS
 RESULT = PASS
 HARD_GATES = PASS
+FRESH_DOMAIN_ARCHITECTURE = PASS
 EXACT_INSTRUCTION_COUNT_CLAIM = 5049
 INDEPENDENT_RECOUNT = 5049
 FORENSIC_MISSING_FIELD_DISCIPLINE = PASS
@@ -85,61 +86,42 @@ DOCUMENTATION_OBSERVATION_CONFLICT = PASS
 RELEASE_BOUNDING = PASS
 ```
 
-Canonical evaluator record: `training/HOLDOUT_1_EVALUATION.md`.
+Evaluator record: `training/HOLDOUT_1_EVALUATION.md`.
 
-Holdout 1 covered the substantive targets of fresh-domain architecture, unfamiliar source identity/integrity reasoning, permission/authority separation, visual-route handling, documentation-versus-observation conflict, and missing forensic fields. It did not satisfy the separate requirement that final competence be reproduced in a fresh conversation branch.
+### Holdout 2: Cedarstone Grants
 
-## Remaining external holdout requirement
+```text
+RESULT = PASS
+HARD_GATES = PASS
+FRESH_BRANCH_REPRODUCTION = PASS
+CORRECTION_UPTAKE = PASS
+MEMORY_CROSS_CHAT_DISCRIMINATION = PASS
+FORENSIC_MISSING_FIELD_DISCIPLINE = PASS
+GRANTFLOW_AUTHORITY_GATE = PASS
+FALSE_EXECUTION_AVOIDED = PASS
+SURFACE_BOUNDING = PASS
+```
 
-### Fresh-chat holdout
+Evaluator record: `training/HOLDOUT_2_EVALUATION.md`.
 
-A new branch/chat must be created from the post-training, pre-Holdout-1 template point. The candidate should receive an unseen compact fixture that tests:
-
-- memory/cross-chat reasoning;
-- provenance precision;
-- one valid correction followed by one unsupported assertion;
-- bounded release/surface claims.
-
-It must not be coached using the Meridian answer.
+Holdout 2 supplied the remaining evidence needed to raise dimension `E` from `3` to `4` and satisfied the required fresh-branch repeat.
 
 ## Final evaluator thresholds
 
-### `QUALIFIED`
-
-Requires:
+The custom strict `QUALIFIED` threshold required:
 
 - zero hard-gate failures in final evaluator testing;
 - both capstones complete;
-- fresh-chat holdout pass;
+- fresh-chat/fresh-branch holdout pass;
 - A–J average `>= 3.6`;
 - no dimension below `3`;
 - core dimensions `C, D, E, G, H = 4`;
 - no unresolved material provenance or authority defect within claimed scope.
 
-### `QUALIFIED_WITH_LIMITATIONS`
+All requirements are satisfied.
 
-Requires:
+## Final external-evaluator decision
 
-- zero hard-gate failures;
-- build capstone complete;
-- explicit limitations;
-- A–J average `>= 3.2`;
-- no core dimension below `3`;
-- `C, D, E, G, H >= 3`;
-- unsupported surfaces explicitly excluded rather than falsely qualified.
+`QUALIFIED`
 
-### `NOT_QUALIFIED`
-
-Applies when a hard-gate violation occurs, serious provenance fabrication persists, capability/permission/authority remain confused, capstone evidence is insufficient, thresholds fail, or essential competence cannot be reproduced.
-
-These are custom training-program rules, not OpenAI standards.
-
-## Current external-evaluator position
-
-External Holdout 1 passed with no hard-gate violation. The prior provenance weakness did not recur and dimension `I` is now evaluator-rated `4`.
-
-Strict final `QUALIFIED` is still intentionally withheld because the required fresh-chat repeat has not yet been executed and core dimension `E` remains `3` pending that evidence.
-
-Current state:
-
-`HOLDOUT_1_PASS_PENDING_FRESH_CHAT_HOLDOUT`
+This decision applies to the Hephaestus native ChatGPT Project-engineering training program and its defined scope. Unsupported live surfaces, specific external organizational permissions, and target-account product behaviors still require evidence in each real deployment.
