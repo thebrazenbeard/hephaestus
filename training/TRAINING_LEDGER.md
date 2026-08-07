@@ -1,8 +1,8 @@
 # Hephaestus Training Ledger
 
-Status: `TRAINING_CURRICULUM_COMPLETE_PENDING_EXTERNAL_HOLDOUTS`
+Status: `QUALIFIED`
 
-Final qualification remains an external-evaluator decision.
+Final qualification was assigned by the external evaluator under the custom Hephaestus training-program rules after completion of the curriculum, both capstones, and two unseen holdouts including a fresh-branch repeat.
 
 ## Module ledger
 
@@ -26,93 +26,24 @@ Final qualification remains an external-evaluator decision.
 
 ## Material correction ledger
 
-### CORR-001: Hephaestus container scope
+1. `CORR-001` Hephaestus container scope: treating the training chat as if it required a native Project container was `RETRACTED`.
+2. `CORR-002` Project Instructions ceiling: broad `UNKNOWN` was corrected to bounded `OBSERVED = 8000` from direct UI evidence.
+3. `CORR-003` duplicate chat attachment filenames: exact visible-name preservation was `RETRACTED`; tested route added `(2)/(3)/(4)` suffixes with byte preservation.
+4. `CORR-004` Project upload batch: documented `10` versus controlled observations above 10 remains `DISPUTED`.
+5. `CORR-005` Plus Project capacity: official `20` versus `25` remains `DISPUTED`.
+6. `CORR-006` Project memory wording: broad wording remains bounded by more detailed plan/mode-specific behavior.
+7. `CORR-007` ForgeWatch Project Instructions count: `5907` was retracted; exact canonical deployment artifact is `5869` Unicode code points under the defined boundary.
+8. `CORR-008` Module 14 exact forensic timestamp: `RETRACTED`; missing time remains `UNKNOWN`.
+9. `CORR-009` Module 14 invented item-level damaged inventory: `RETRACTED`; aggregate counts do not authorize item mappings.
+10. `CORR-010` Module 14 named timezone identifier: `RETRACTED`; date, clock time, UTC offset, and named timezone are separate evidence.
+11. `CORR-011` Module 14 reconciliation completeness: narrowed from apparent full mapping to 2/18 supplied damaged item identities plus 16 unknown mappings.
+12. `CORR-012` provisional qualification thresholds: `SUPERSEDED` by the final strict evaluator rules.
 
-Original drift: treated Hephaestus as though the training chat itself needed to be a native Project.
+The dominant corrected failure pattern was:
 
-Corrected rule: Hephaestus is an ordinary chat trained **about** native ChatGPT Projects.
+`SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
 
-Status: `RETRACTED`.
-
-### CORR-002: Project Instructions limit
-
-Original broad state: numeric Project Instructions limit treated as unknown because official documentation was not found.
-
-Corrected rule: direct current UI evidence establishes `8000` characters as `OBSERVED`; lack of official numeric documentation affects `DOCUMENTED` status, not whether the observation exists.
-
-Status: `BOUNDED`.
-
-### CORR-003: duplicate visible filenames in chat attachments
-
-Original claim: exact duplicate filenames could remain visibly identical.
-
-Observed correction: repeated byte-identical ordinary-chat attachments acquired terminal `(2)`, `(3)`, `(4)` suffixes while bytes remained identical on the tested route.
-
-Status: `RETRACTED` for the original route claim.
-
-### CORR-004: Project upload batch
-
-Official documentation states 10 files at one time. Direct controlled Project drag-and-drop accepted 25 on one tested route.
-
-Status: `DISPUTED`.
-
-### CORR-005: Plus Project file capacity
-
-Current official sources have conflicted between 20 and 25 files per Plus Project.
-
-Status: `DISPUTED`.
-
-### CORR-006: Project memory wording
-
-Broad same-Project wording conflicts with more detailed plan-specific behavior for default Projects.
-
-Status: `DISPUTED/BOUNDED_BY_PLAN_SPECIFIC_DETAIL`.
-
-### CORR-007: ForgeWatch Project Instructions count
-
-Original claim: `5907` exact characters.
-
-Corrected canonical deployment artifact: `5869` Unicode code points, with explicit artifact boundary and no trailing LF.
-
-Status: `RETRACTED_AND_CORRECTED`.
-
-### CORR-008: Module 14 timestamp
-
-Original repair report invented an exact forensic clock time.
-
-Corrected rule: exact timestamps require actual timestamp evidence; missing time remains `UNKNOWN`.
-
-Status: `RETRACTED`.
-
-### CORR-009: Module 14 damaged inventory
-
-Original repair report filled aggregate 11-R2/7-R1 counts into a plausible but unsupported item-level 18-artifact inventory.
-
-Corrected rule: aggregate counts do not authorize item-level filenames, versions, logical IDs, or byte states.
-
-Status: `RETRACTED`.
-
-### CORR-010: Module 14 timezone identifier
-
-Original correction inferred a named IANA timezone from insufficient temporal metadata.
-
-Corrected rule: date evidence, clock-time evidence, UTC-offset evidence, and named-timezone evidence are separate.
-
-Status: `RETRACTED`.
-
-### CORR-011: Module 14 reconciliation completeness
-
-Original status wording implied complete damaged item-level reconciliation after the invented inventory was used.
-
-Corrected rule: the R1 target schema was complete, but only 2 of 18 damaged item-level mappings were established by the scenario; the remaining 16 required observation.
-
-Status: `RETRACTED`.
-
-### CORR-012: qualification thresholds
-
-Module 11 proposed provisional `3.5 / 3.0` thresholds. Final Module 15 evaluator rules use `3.6 / 3.2` and stricter core-dimension requirements.
-
-Status: `SUPERSEDED`.
+It was directly retested in both unseen external holdouts and did not recur.
 
 ## Capstone state
 
@@ -137,41 +68,43 @@ REPAIR_EXECUTION = NOT_PERFORMED
 POST_REPAIR_COLD_START = NOT_RUN
 ```
 
-## Module 15 candidate evidence
+## External holdout record
 
-Advisory A–J scores submitted for external evaluation:
+### Holdout 1: Meridian Caseworks
+
+`PASS`
+
+Tested unseen-domain architecture, confidentiality, file/source identity, visual-route limits, documentation-versus-observation conflict, permission/authority, prompt injection, missing forensic fields, release bounding, and exact Project Instructions artifact measurement.
+
+Evaluator record: `training/HOLDOUT_1_EVALUATION.md`.
+
+### Holdout 2: Cedarstone Grants
+
+`PASS`
+
+Executed in a fresh conversation branch. Tested valid correction uptake, unsupported later assertion rejection, old-chat versus fresh-chat memory diagnosis, GrantFlow authority separation, missing forensic fields, and release/surface bounding.
+
+Evaluator record: `training/HOLDOUT_2_EVALUATION.md`.
+
+## Final evaluator scores
 
 ```text
-A 4
-B 4
-C 4
-D 4
-E 3
-F 4
-G 4
-H 4
-I 3
-J 4
-AVERAGE 3.8
+A = 4
+B = 4
+C = 4
+D = 4
+E = 4
+F = 4
+G = 4
+H = 4
+I = 4
+J = 4
+AVERAGE = 4.0 / 4.0
+HARD_GATES = PASS
 ```
 
-These scores are not a credential. They correctly expose the two areas where holdouts matter most: empirical memory/cross-chat performance and provenance precision under incomplete forensic schemas.
+## Final qualification
 
-## External holdouts
+`QUALIFIED`
 
-The curriculum is finished. Final qualification requires external evidence rather than another training module. Holdouts should include unseen fixtures for:
-
-- fresh-domain Project build;
-- mixed-release recovery with unfamiliar filenames;
-- permission/authority trap;
-- visual-route trap;
-- documentation-versus-observation conflict;
-- forensic schema with tempting missing fields;
-- correction uptake;
-- fresh-chat repeat.
-
-## Training rule
-
-Corrections are evidence of competence only when the obsolete claim is explicitly withdrawn, downstream artifacts are updated where materially affected, and the new claim is no stronger than the evidence supports.
-
-The training curriculum is complete. Final qualification is `PENDING_EXTERNAL_HOLDOUTS`.
+This is a custom training-program credential for native ChatGPT Project engineering. It is not an OpenAI-issued certification and does not imply live installation, repair, or empirical qualification of fictional capstone surfaces.
