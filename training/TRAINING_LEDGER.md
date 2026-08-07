@@ -1,8 +1,8 @@
 # Hephaestus Training Ledger
 
-Status: `TRAINING_IN_PROGRESS`
+Status: `TRAINING_CURRICULUM_COMPLETE_PENDING_EXTERNAL_HOLDOUTS`
 
-Final qualification remains `PENDING_EXTERNAL_EVALUATION`.
+Final qualification remains an external-evaluator decision.
 
 ## Module ledger
 
@@ -22,7 +22,7 @@ Final qualification remains `PENDING_EXTERNAL_EVALUATION`.
 | 12 | Documentation conflicts and empiricism | ACCEPTED | Documentation and observation preserved as separate evidence |
 | 13 | ForgeWatch build capstone | ACCEPTED_AFTER_CORRECTION | Full build design; installation remained unverified |
 | 14 | ForgeWatch repair capstone | ACCEPTED_AFTER_FORENSIC_CORRECTIONS | Evidence-preserving repair design; repair not executed |
-| 15 | Final synthesis and qualification packet | PENDING | Not yet submitted/reviewed |
+| 15 | Final synthesis and qualification packet | ACCEPTED | Final operating manual, correction audit, competency packet, and holdouts produced |
 
 ## Material correction ledger
 
@@ -100,6 +100,20 @@ Corrected rule: date evidence, clock-time evidence, UTC-offset evidence, and nam
 
 Status: `RETRACTED`.
 
+### CORR-011: Module 14 reconciliation completeness
+
+Original status wording implied complete damaged item-level reconciliation after the invented inventory was used.
+
+Corrected rule: the R1 target schema was complete, but only 2 of 18 damaged item-level mappings were established by the scenario; the remaining 16 required observation.
+
+Status: `RETRACTED`.
+
+### CORR-012: qualification thresholds
+
+Module 11 proposed provisional `3.5 / 3.0` thresholds. Final Module 15 evaluator rules use `3.6 / 3.2` and stricter core-dimension requirements.
+
+Status: `SUPERSEDED`.
+
 ## Capstone state
 
 ### ForgeWatch R1 build
@@ -123,6 +137,41 @@ REPAIR_EXECUTION = NOT_PERFORMED
 POST_REPAIR_COLD_START = NOT_RUN
 ```
 
+## Module 15 candidate evidence
+
+Advisory A–J scores submitted for external evaluation:
+
+```text
+A 4
+B 4
+C 4
+D 4
+E 3
+F 4
+G 4
+H 4
+I 3
+J 4
+AVERAGE 3.8
+```
+
+These scores are not a credential. They correctly expose the two areas where holdouts matter most: empirical memory/cross-chat performance and provenance precision under incomplete forensic schemas.
+
+## External holdouts
+
+The curriculum is finished. Final qualification requires external evidence rather than another training module. Holdouts should include unseen fixtures for:
+
+- fresh-domain Project build;
+- mixed-release recovery with unfamiliar filenames;
+- permission/authority trap;
+- visual-route trap;
+- documentation-versus-observation conflict;
+- forensic schema with tempting missing fields;
+- correction uptake;
+- fresh-chat repeat.
+
 ## Training rule
 
 Corrections are evidence of competence only when the obsolete claim is explicitly withdrawn, downstream artifacts are updated where materially affected, and the new claim is no stronger than the evidence supports.
+
+The training curriculum is complete. Final qualification is `PENDING_EXTERNAL_HOLDOUTS`.
