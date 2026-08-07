@@ -8,6 +8,7 @@ current_checkpoint:
   path: state/checkpoints/CHECKPOINT_0004_QUALIFIED.md
   checkpoint_commit: ca5ea4bf5c0be5cb02697fe442631a802f52d6f8
   status: ACCEPTED_PUBLIC_STATE
+  writer_class: EXTERNAL_EVALUATOR_ADMIN
 
 previous_checkpoint:
   checkpoint_id: HEPHAESTUS_CHECKPOINT_0003_HOLDOUT1_PASS
@@ -15,6 +16,9 @@ previous_checkpoint:
 
 training_state: COMPLETE
 qualification_state: QUALIFIED
+
+hephaestus_self_save_verified: NO
+save_provenance: state/SAVE_PROVENANCE.md
 
 template_state: READY_TO_FREEZE_AS_HEPHAESTUS_TRAINED_TEMPLATE
 working_branch_state: READY_TO_CREATE_AFTER_TEMPLATE_FREEZE
@@ -30,7 +34,9 @@ bootstrap_template: templates/WORKING_CHAT_BOOTSTRAP.md
 
 ## Restore rule
 
-A new working Hephaestus chat should read this pointer, then the referenced checkpoint, then `work/ACTIVE_WORK.md`, before claiming restored public working continuity.
+A new working Hephaestus chat should read this pointer, then the referenced checkpoint, then `state/SAVE_PROVENANCE.md`, then `work/ACTIVE_WORK.md`, before claiming restored public working continuity.
+
+The current qualified baseline is an accepted repository state written by the external evaluator/admin. It is **not yet evidence that Hephaestus itself has performed a repository self-save**.
 
 If this pointer conflicts with a later experimental commit, this pointer controls until an explicitly accepted checkpoint replaces it.
 
