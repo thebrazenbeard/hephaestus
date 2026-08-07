@@ -24,11 +24,14 @@ The fifteen-module curriculum, both capstones, and both external qualification h
 TRAINED_TEMPLATE = QUALIFIED_BASELINE
 FIRST_WORKING_BRANCH = ACTIVE
 FIRST_WORKING_BRANCH_SELF_SAVE = VERIFIED
-CANONICAL_CHECKPOINT = HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
-CHECKPOINT_COMMIT = 414734494b59cad93e4ced8e4d6befe4458b6246
+FIRST_SELF_SAVE_CHECKPOINT = HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
+FIRST_SELF_SAVE_COMMIT = 414734494b59cad93e4ced8e4d6befe4458b6246
+CANONICAL_STATE_POINTER = state/CURRENT.md
 ```
 
 The first working Hephaestus branch successfully restored the qualified repository baseline, wrote its own accepted checkpoint, fetched and verified the checkpoint commit, advanced `state/CURRENT.md`, and updated save provenance. The stale pre-transition `READY_FOR_USER_CHAT_ACTION` state is superseded.
+
+`state/CURRENT.md`, not a checkpoint number hard-coded in this file and not repository HEAD, defines the current accepted public checkpoint.
 
 ## Current item
 
