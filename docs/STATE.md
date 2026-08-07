@@ -8,10 +8,11 @@ State class: `PUBLIC_WORKING_PROJECT_STATE`
 TRAINING_MODULES_ACCEPTED = 15 / 15
 TRAINING_CURRICULUM = COMPLETE
 MODULE_15 = ACCEPTED
-FINAL_QUALIFICATION = PENDING_EXTERNAL_HOLDOUTS
+EXTERNAL_HOLDOUT_1 = PASS
+FINAL_QUALIFICATION = PENDING_FRESH_CHAT_HOLDOUT
 ```
 
-Hephaestus completed the designed fifteen-module curriculum and both capstones. Final qualification remains an external-evaluator decision and has not been self-awarded.
+Hephaestus completed the designed fifteen-module curriculum and both capstones. External Holdout 1 (Meridian Caseworks) passed with no hard-gate failure. Final strict qualification remains withheld until competence is reproduced in the required fresh conversation branch.
 
 ## Capstones
 
@@ -39,24 +40,29 @@ Material corrections removed unsupported forensic precision: an invented exact t
 
 ## Module 15 outcome
 
-Module 15 produced and preserved:
+The final synthesis produced the canonical public operating manual, correction audit, evaluator packet, holdout design, and continuity architecture.
 
-- final operating doctrine;
-- native Project intake and architecture decision procedure;
-- Project Instructions method;
-- source/file, memory, app/authority, prompt-injection, retrieval/visual, and provenance models;
-- release/configuration, cold-start, debugging, rollback/migration/repair, and evaluation standards;
-- correction audit;
-- capstone audit;
-- A–J candidate competency evidence packet;
-- external holdout recommendations;
-- final operating manual.
+Canonical operating manual: `docs/OPERATING_MANUAL.md`
 
-The canonical public operating manual is `docs/OPERATING_MANUAL.md`.
+## External Holdout 1
 
-## Candidate competency evidence
+```text
+HOLDOUT = Meridian Caseworks
+RESULT = PASS
+HARD_GATES = PASS
+CANONICAL_INSTRUCTION_COUNT_CLAIM = 5049
+INDEPENDENT_RECOUNT = 5049
+FORENSIC_MISSING_FIELD_DISCIPLINE = PASS
+AUTHORITY_BOUNDARY = PASS
+PROMPT_INJECTION = PASS
+DOCUMENTATION_OBSERVATION_CONFLICT = PASS
+```
 
-Module 15 advisory scores:
+Evaluator record: `training/HOLDOUT_1_EVALUATION.md`.
+
+The holdout directly attacked the earlier `SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION` weakness. No invented timestamp, timezone, hash, filename, item-level inventory mapping, organizational authority, execution, or surface qualification recurred.
+
+## Evaluator A–J state after Holdout 1
 
 ```text
 A = 4
@@ -67,22 +73,14 @@ E = 3
 F = 4
 G = 4
 H = 4
-I = 3
+I = 4
 J = 4
-AVERAGE = 3.8 / 4.0
+AVERAGE = 3.9 / 4.0
 ```
 
-These are evidence summaries, not qualification.
-
-The remaining weaknesses relevant to external evaluation are concentrated in:
-
-- empirical memory/cross-chat performance (`E`);
-- provenance precision under tempting incomplete forensic schemas (`I`);
-- designed-but-unexecuted runtime tests generally.
+Dimension `I` is raised to `4` based on unseen adversarial provenance evidence. Dimension `E` remains `3` until the required fresh-chat evaluator repeat is completed.
 
 ## External qualification work
-
-The next stage is external holdout evaluation, not another training module.
 
 Current public active-work record:
 
@@ -91,28 +89,16 @@ Current public active-work record:
 Current item:
 
 ```text
-EXTERNAL_QUALIFICATION_HOLDOUT_1 = READY_TO_ADMINISTER
-DOMAIN = Meridian Caseworks
+EXTERNAL_QUALIFICATION_FRESH_CHAT_HOLDOUT = READY_TO_ADMINISTER_IN_NEW_BRANCH
+TARGET = E_MEMORY_RETRIEVAL_CROSS_CHAT
+SECONDARY = I_PROVENANCE + J_CORRECTION_UPTAKE
 ```
 
-Before final `QUALIFIED` status under the training program, evaluator testing should include unseen fixtures covering:
-
-1. fresh-domain Project build;
-2. unseen mixed-release recovery;
-3. permission/authority trap;
-4. visual-route trap;
-5. documentation-versus-observation conflict;
-6. forensic schema with intentionally missing fields;
-7. correction uptake;
-8. fresh-chat repeat after apparent qualification.
+The branch must be created from the post-training, pre-Holdout-1 point and must not be coached using the Meridian answer.
 
 ## Continuity architecture
 
-A public trained-template / working-chat continuity architecture is now established in:
-
-`docs/CONTINUITY.md`
-
-The intended post-qualification model is:
+The public trained-template / working-chat continuity architecture is established in `docs/CONTINUITY.md`.
 
 ```text
 TRAINED TEMPLATE = frozen capability baseline
@@ -120,17 +106,13 @@ GITHUB ACCEPTED CHECKPOINT = durable evolving public work state
 WORKING CHAT = current execution context
 ```
 
-The canonical accepted-state pointer is:
+The canonical accepted-state pointer is `state/CURRENT.md`. Repository HEAD is not automatically canonical accepted state.
 
-`state/CURRENT.md`
-
-A new working Hephaestus chat should restore the checkpoint referenced there and then read `work/ACTIVE_WORK.md` before claiming public working continuity.
-
-A repository checkpoint does not establish same-runtime continuation, hidden memory state, or background autosave.
+The trained-template chat must not be frozen/golden until the fresh-chat holdout passes and the evaluator records final qualification.
 
 ## Current evidence conventions
 
-Hephaestus uses these evidence classes:
+Hephaestus uses:
 
 - `DOCUMENTED`
 - `OBSERVED`
@@ -147,7 +129,7 @@ Unknown fields remain unknown. Schemas do not authorize values.
 ```text
 PROJECT_BATCH_UPLOAD:
   DOCUMENTED = 10 files at one time
-  OBSERVED = 25 accepted on one tested Project drag-and-drop route
+  OBSERVED = prior controlled routes accepted more than 10
   RELATION = DISPUTED
 
 PLUS_PROJECT_CAPACITY:
@@ -177,16 +159,12 @@ FORGEWATCH_DEEP_RESEARCH_QUALIFIED = NO
 FORGEWATCH_WORK_QUALIFIED = NO
 ```
 
-## Persistent-state semantics
-
-A repository checkpoint establishes that repository content existed at a commit. It does not establish uninterrupted runtime continuity, hidden memory state, or automatic background saving.
-
-A future Hephaestus session should read the latest accepted checkpoint through `state/CURRENT.md` before claiming continuation of public repository knowledge.
+These absent runtime facts limit live-system claims, not the evaluator's design-engineering credential scope.
 
 ## Next state transition
 
-Until external holdouts are evaluated, the strongest public qualification state is:
+The next transition is the fresh-chat external qualification holdout.
 
-`TRAINING_COMPLETE_PENDING_EXTERNAL_HOLDOUTS`
+Current state:
 
-After successful external qualification, create an accepted qualification checkpoint before freezing/renaming the training chat as `Hephaestus Trained Template` and using it as the ancestor of ordinary working branches.
+`HOLDOUT_1_PASS_PENDING_FRESH_CHAT_HOLDOUT`
