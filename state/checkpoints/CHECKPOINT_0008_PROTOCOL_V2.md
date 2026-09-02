@@ -22,7 +22,7 @@ open_conflicts: []
 open_limitations:
   - This checkpoint updates repository-source operating doctrine only; it does not prove every running/future chat has consumed it until that chat restores current repository state.
   - Protected downstream effects remain separately governed unless Patrick expressly authorizes them.
-source_commit: TO_BE_BOUND_BY_CURRENT_POINTER_COMMIT
+checkpoint_artifact_creation_commit: dd119d8e1bebbf2654682f68632c2827cb213f13
 ```
 
 ## Operating consequence
