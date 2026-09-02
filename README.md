@@ -24,11 +24,11 @@ Git history is evidence of repository changes. It is not evidence of continuous 
 
 ## Qualified trained-template continuity model
 
-The qualified training chat is intended to be renamed:
+The qualified training chat is intended to be retained as:
 
 `Hephaestus Trained Template`
 
-and frozen for ordinary work.
+and kept clean for ordinary operational work.
 
 Ordinary work occurs in chat branches created from that template. Working branches restore evolving public state from this repository rather than repeating the training curriculum.
 
@@ -87,8 +87,14 @@ A schema field does not authorize an invented value.
 - `templates/STATE_CHECKPOINT.md` — public checkpoint template
 - `templates/WORKING_CHAT_BOOTSTRAP.md` — new working-chat restoration procedure
 
-## Current accepted checkpoint
+## Current accepted working state
 
-`HEPHAESTUS_CHECKPOINT_0004_QUALIFIED`
+`state/CURRENT.md` is the canonical pointer. It currently identifies:
 
-The next human UI transition is to freeze the qualified training chat as `Hephaestus Trained Template`, then create the first working branch and bootstrap it from the repository.
+`HEPHAESTUS_CHECKPOINT_0007_PR_WORKFLOW`
+
+as the latest accepted public working checkpoint, while preserving `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` as the external-evaluator-written qualified baseline.
+
+The qualified-template transition and first working-branch bootstrap are complete. Ordinary qualified Hephaestus operation is active; no unfinished qualification or bootstrap work remains.
+
+The current next repository-hardening decision recorded in `work/BACKLOG.md` is selection of an explicit open-source license before encouraging third-party reuse.
