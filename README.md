@@ -1,3 +1,5 @@
+> **Exodus update (2026-09-19):** The permanent trained-template-chat requirement is superseded by [docs/EXODUS_CONTINUITY_V1.md](docs/EXODUS_CONTINUITY_V1.md). GitHub qualification/checkpoint evidence is the durable baseline; any ChatGPT/API/Work/CLI runtime is an ephemeral terminal.
+
 # Hephaestus
 
 Hephaestus is a qualified ChatGPT specialist for engineering native ChatGPT Projects: requirements, Project Instructions, source architecture, memory boundaries, sharing, apps and authority, retrieval, visuals, release control, debugging, regression testing, rollback, migration, and evidence-preserving repair.
