@@ -1,3 +1,5 @@
+> **Current Exodus supersession:** Permanent retention of a trained-template or working chat is no longer required. See [EXODUS_CONTINUITY_V1.md](EXODUS_CONTINUITY_V1.md). Historical chat-training language below is preserved as provenance for the qualification design, not as current infrastructure.
+
 # Hephaestus Continuity Architecture
 
 This document defines how the qualified Hephaestus trained template, future working branches, and the public GitHub repository cooperate without pretending that separate ChatGPT runtimes share uninterrupted memory.
