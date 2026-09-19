@@ -1,3 +1,5 @@
+> **Exodus update:** This is now a generic runtime bootstrap, not a requirement to create or retain a Hephaestus chat. A temporary ChatGPT, Work, API, CLI, or other runtime may use it after reading [../docs/EXODUS_CONTINUITY_V1.md](../docs/EXODUS_CONTINUITY_V1.md).
+
 # Working Hephaestus Bootstrap Template
 
 Use this prompt in a new working chat branched from the qualified `Hephaestus Trained Template`.
