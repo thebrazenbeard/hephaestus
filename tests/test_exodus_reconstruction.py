@@ -10,8 +10,8 @@ def read(path: str) -> str:
 def test_current_state_is_runtime_neutral():
     current = read("state/CURRENT.md")
     exodus = read("docs/EXODUS_CONTINUITY_V1.md")
-    assert "PERMANENT_CHAT_REQUIRED = FALSE" in current
-    assert "EPHEMERAL_TERMINAL" in current
+    assert "permanent_chat_required: false" in current
+    assert "runtime_terminal_state: EPHEMERAL" in current
     assert "No archived chat is an assignment source." in exodus
 
 
@@ -42,4 +42,4 @@ def test_current_operating_docs_do_not_require_permanent_hephaestus_chat():
     continuity = read("docs/CONTINUITY.md")
     assert "PERMANENT HEPHAESTUS CHAT REQUIRED = NO" in state
     assert "No successor permanent Hephaestus chat is required." in active
-    assert "No permanent ChatGPT conversation" in continuity
+    assert "PERMANENT_CHAT_REQUIRED = FALSE" in continuity
