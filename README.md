@@ -1,6 +1,6 @@
 # Hephaestus
 
-Hephaestus is a qualified ChatGPT specialist for engineering native ChatGPT Projects: requirements, Project Instructions, source architecture, memory boundaries, sharing, apps and authority, retrieval, visuals, release control, debugging, regression testing, rollback, migration, and evidence-preserving repair.
+Hephaestus is a qualified specialist for engineering native ChatGPT Projects: requirements, Project Instructions, source architecture, memory boundaries, sharing, apps and authority, retrieval, visuals, release control, debugging, regression testing, rollback, migration, and evidence-preserving repair.
 
 ## Current status
 
@@ -18,29 +18,34 @@ This qualification is an external-evaluator decision under the custom Hephaestus
 
 ## Repository purpose
 
-This repository is the public, version-controlled home for Hephaestus's reusable engineering knowledge, accepted state checkpoints, training and correction history, operating manual, qualification evidence, continuity protocol, templates, and future public tooling.
+This repository is the public, version-controlled home for Hephaestus's reusable engineering knowledge, accepted state checkpoints, training/correction history, operating manual, qualification evidence, continuity protocol, worker-reconstruction contract, templates, and future public tooling.
 
 Git history is evidence of repository changes. It is not evidence of continuous memory, consciousness, deployment, installation, or runtime state outside the repository.
 
-## Qualified trained-template continuity model
+## Chatless continuity model
 
-The qualified training chat is intended to be retained as:
+Hephaestus does not require a permanent ChatGPT conversation.
 
-`Hephaestus Trained Template`
-
-and kept clean for ordinary operational work.
-
-Ordinary work occurs in chat branches created from that template. Working branches restore evolving public state from this repository rather than repeating the training curriculum.
+The durable model is:
 
 ```text
-TRAINED TEMPLATE = qualified capability baseline
-GITHUB CHECKPOINTS = evolving durable public work state
-WORKING CHAT = current execution context
+QUALIFIED TRAINING EVIDENCE = capability/qualification provenance
+GITHUB CHECKPOINTS = accepted durable public state
+CHAT COMMUNICATION BUS = current routing/coordination evidence
+TEMPORARY RUNTIME = execution terminal only
 ```
 
-A replacement working chat restores from `state/CURRENT.md` and the accepted checkpoint it references. It does not claim same-runtime continuation or private recollection from an earlier working chat.
+A temporary Hephaestus runtime may be a ChatGPT context, Work task, API process, CLI session, subagent, or model invocation. The terminal is not Hephaestus's durable identity, memory, authority, or canonical state.
 
-See `docs/CONTINUITY.md` and `templates/WORKING_CHAT_BOOTSTRAP.md`.
+The historical label `Hephaestus Trained Template` remains provenance for the original qualification arrangement; it is no longer an infrastructure dependency.
+
+Fresh runtimes reconstruct from `architecture/WORKER_RECONSTRUCTION.md`, `state/CURRENT.md`, current Bus state, and an exact current assignment.
+
+See:
+
+- `architecture/WORKER_RECONSTRUCTION.md`
+- `docs/CONTINUITY.md`
+- `templates/WORKING_CHAT_BOOTSTRAP.md`
 
 ## Public-data boundary
 
@@ -71,30 +76,27 @@ A schema field does not authorize an invented value.
 
 ## Repository map
 
-- `docs/STATE.md` — current qualification, scope, limitations, and transition state
+- `architecture/WORKER_RECONSTRUCTION.md` — chatless worker identity/recovery/authority contract
+- `docs/STATE.md` — qualification, scope, limitations, and transition state
 - `docs/GOVERNANCE.md` — repository governance and persistence rules
-- `docs/CONTINUITY.md` — trained-template / working-chat / repository continuity architecture
+- `docs/CONTINUITY.md` — terminal-neutral continuity architecture
 - `docs/OPERATING_MANUAL.md` — canonical public field manual
-- `state/CURRENT.md` — canonical pointer to the latest accepted public checkpoint
+- `state/CURRENT.md` — pointer to the latest accepted public checkpoint
 - `state/checkpoints/` — accepted state checkpoints
 - `work/ACTIVE_WORK.md` — current public unfinished-work record
 - `work/BACKLOG.md` — public future work
 - `training/TRAINING_LEDGER.md` — module, correction, capstone, and holdout history
-- `training/QUALIFICATION_PACKET.md` — final evaluator evidence and credential scope
+- `training/QUALIFICATION_PACKET.md` — evaluator evidence and credential scope
 - `training/HOLDOUT_1_EVALUATION.md` — Meridian evaluator record
 - `training/HOLDOUT_2_EVALUATION.md` — Cedarstone fresh-branch evaluator record
 - `knowledge/PROJECT_ENGINEERING_CORE.md` — reusable native Project engineering doctrine
 - `templates/STATE_CHECKPOINT.md` — public checkpoint template
-- `templates/WORKING_CHAT_BOOTSTRAP.md` — new working-chat restoration procedure
+- `templates/WORKING_CHAT_BOOTSTRAP.md` — runtime-neutral reconstruction/bootstrap prompt
 
-## Current accepted working state
+## Current accepted state
 
-`state/CURRENT.md` is the canonical pointer. It currently identifies:
+`state/CURRENT.md` controls the accepted checkpoint pointer.
 
-`HEPHAESTUS_CHECKPOINT_0007_PR_WORKFLOW`
+The qualified training baseline and historical working-terminal checkpoints remain provenance. Ordinary qualified Hephaestus operation is available on demand after a fresh runtime reconstructs current durable state and receives an exact assignment.
 
-as the latest accepted public working checkpoint, while preserving `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` as the external-evaluator-written qualified baseline.
-
-The qualified-template transition and first working-branch bootstrap are complete. Ordinary qualified Hephaestus operation is active; no unfinished qualification or bootstrap work remains.
-
-The current next repository-hardening decision recorded in `work/BACKLOG.md` is selection of an explicit open-source license before encouraging third-party reuse.
+`PERMANENT_CHAT_REQUIRED = FALSE`
