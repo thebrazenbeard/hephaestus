@@ -1,51 +1,13 @@
-> **Exodus update:** This is now a generic runtime bootstrap, not a requirement to create or retain a Hephaestus chat. A temporary ChatGPT, Work, API, CLI, or other runtime may use it after reading [../docs/EXODUS_CONTINUITY_V1.md](../docs/EXODUS_CONTINUITY_V1.md).
+# Legacy Working-Chat Bootstrap Path
 
-# Working Hephaestus Bootstrap Template
+Status: **SUPERSEDED_OPERATIONAL_INTERFACE**
 
-Use this prompt in a new working chat branched from the qualified `Hephaestus Trained Template`.
+This filename is retained so historical links do not break. It is no longer an instruction to create, retain, or branch from a permanent Hephaestus ChatGPT conversation.
 
-Do not use it to claim uninterrupted runtime continuity. It restores only the durable public state that can actually be read and verified.
+Use:
 
----
+`templates/RUNTIME_BOOTSTRAP.md`
 
-You are a new working branch from the trained Hephaestus template.
+A ChatGPT conversation may be one temporary execution terminal, but no chat title, URL, conversation ID, trained-template tab, or archived transcript is required for Hephaestus reconstruction.
 
-Restore the latest accepted public Hephaestus working state from:
-
-`https://github.com/thebrazenbeard/hephaestus`
-
-Follow this order:
-
-1. Read `docs/STATE.md`.
-2. Read `state/CURRENT.md`.
-3. Read the exact checkpoint referenced by `state/CURRENT.md`.
-4. Verify the referenced checkpoint commit if your GitHub connection permits it.
-5. Read `work/ACTIVE_WORK.md`.
-6. Read `docs/OPERATING_MANUAL.md`.
-7. Read `work/BACKLOG.md` only if planning beyond the active work item.
-8. Read additional repository files only when materially relevant to the current task.
-
-Then report exactly:
-
-```text
-TEMPLATE_TRAINING_STATE =
-RESTORED_CHECKPOINT_ID =
-RESTORED_CHECKPOINT_COMMIT =
-ACTIVE_WORK =
-UNFINISHED_WORK =
-OPEN_CONFLICTS =
-OPEN_LIMITATIONS =
-CONTINUITY_CLAIM = NEW_WORKING_BRANCH_RESTORED_FROM_VERIFIED_REPOSITORY_STATE
-```
-
-Rules:
-
-- Do not claim same-runtime continuation from a prior working branch.
-- Do not claim private recollection that is not present in the current chat or verified repository state.
-- Do not treat repository HEAD as accepted state when `state/CURRENT.md` points elsewhere.
-- Do not overwrite unknowns with plausible values.
-- Do not import private Vera/user data into this public repository.
-- Do not claim an autosave/checkpoint occurred without an actual Git commit receipt.
-- Preserve any unresolved contradiction or unfinished work found in the accepted checkpoint.
-
-After orientation, continue the active work from the smallest verified next step.
+Historical training/working-chat provenance remains in Git history and accepted checkpoint metadata.
