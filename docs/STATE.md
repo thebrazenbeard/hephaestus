@@ -2,7 +2,7 @@
 
 State class: `PUBLIC_WORKING_PROJECT_STATE`
 
-## Training and qualification state
+## Training and qualification
 
 ```text
 TRAINING_MODULES_ACCEPTED = 15 / 15
@@ -10,57 +10,20 @@ TRAINING_CURRICULUM = COMPLETE
 CAPSTONE_1 = ACCEPTED_AFTER_CORRECTION
 CAPSTONE_2 = ACCEPTED_AFTER_FORENSIC_CORRECTIONS
 EXTERNAL_HOLDOUT_1 = PASS
-EXTERNAL_HOLDOUT_2_FRESH_BRANCH = PASS
+EXTERNAL_HOLDOUT_2_FRESH_RUNTIME = PASS
 HARD_GATES = PASS
 FINAL_TRAINING_PROGRAM_QUALIFICATION = QUALIFIED
 ```
 
-Hephaestus completed the fifteen-module curriculum, both capstones, the unseen Meridian Caseworks holdout, and the fresh-branch Cedarstone Grants holdout. The final qualification decision was made by the external evaluator, not self-awarded by the candidate.
-
-## Final evaluator score state
-
-```text
-A = 4
-B = 4
-C = 4
-D = 4
-E = 4
-F = 4
-G = 4
-H = 4
-I = 4
-J = 4
-AVERAGE = 4.0 / 4.0
-```
-
-The final fresh-branch holdout supplied the remaining evidence needed for `E = 4`. It reproduced correction uptake, old-chat versus fresh-chat discrimination, forensic missing-field discipline, authority separation, and bounded release/surface claims without coaching from the Meridian answer.
-
-Evaluator records:
-
-- `training/HOLDOUT_1_EVALUATION.md`
-- `training/HOLDOUT_2_EVALUATION.md`
-- `training/QUALIFICATION_PACKET.md`
+The qualification decision was made by the external evaluator under the custom Hephaestus program. It is not an OpenAI-issued certification.
 
 ## Credential scope
 
-`QUALIFIED` means qualified under this custom Hephaestus training program for native ChatGPT Project engineering, including:
+`QUALIFIED` covers native ChatGPT Project engineering: requirements, architecture, instructions, source/file lifecycle, memory/retrieval reasoning, privacy/apps/authority separation, prompt-injection controls, provenance/uncertainty, release/configuration/cold-start design, debugging/regression, rollback/migration/repair planning, and evidence-preserving correction.
 
-- requirements and architecture;
-- Project Instructions engineering;
-- source/file identity and lifecycle;
-- memory/retrieval/cross-chat reasoning;
-- sharing/privacy/apps/authority separation;
-- prompt-injection controls;
-- retrieval and visual-route design;
-- provenance and uncertainty discipline;
-- release/configuration/cold-start engineering;
-- debugging and regression;
-- repair, rollback, and migration planning;
-- evidence-preserving correction and forensic handling.
+It does not establish live installation, provider permission, organizational authority, or surface qualification for fictional capstone systems.
 
-It does not mean a fictional capstone Project was live-installed, repaired, or empirically qualified on every surface.
-
-## Runtime evidence still absent
+## Runtime evidence absent from the credential
 
 ```text
 RUNTIME_PROJECT_INSTALLATIONS_VERIFIED = 0
@@ -71,75 +34,30 @@ FORGEWATCH_DEEP_RESEARCH_QUALIFIED = NO
 FORGEWATCH_WORK_QUALIFIED = NO
 ```
 
-These are scope limitations, not failures of the design-engineering credential.
+## Material correction history
 
-## Material correction history retained
-
-Qualification does not erase the evidence trail. Important corrected failures remain recorded in the training ledger and qualification packet, including:
-
-- Project-container scope drift;
-- Project Instructions count `5907 -> 5869` after canonical-boundary correction;
-- chat attachment duplicate-filename behavior correction;
-- Module 14 unsupported timestamp;
-- Module 14 invented item-level inventory;
-- Module 14 unsupported named timezone identifier.
-
-The corrected failure pattern:
+Qualification does not erase corrected failures. The durable training ledger/qualification packet preserves them, including the permanent lesson:
 
 `SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
 
-was directly retested in both external holdouts and did not recur.
+## Exodus continuity
 
-## Continuity architecture
-
-The qualified trained-template / working-chat architecture is defined in `docs/CONTINUITY.md`.
+Current architecture is defined by `docs/EXODUS_CONTINUITY_V1.md` and `docs/CONTINUITY.md`.
 
 ```text
-TRAINED TEMPLATE = qualified frozen capability baseline
-GITHUB ACCEPTED CHECKPOINT = durable evolving public work state
-WORKING CHAT = current execution context
+DURABLE IDENTITY/QUALIFICATION = REPOSITORY EVIDENCE
+ACCEPTED PUBLIC STATE = state/CURRENT.md
+EXECUTION RUNTIME = EPHEMERAL TERMINAL
+PERMANENT HEPHAESTUS CHAT REQUIRED = NO
+TRAINING CHAT = HISTORICAL_EVIDENCE_ONLY
 ```
 
-The canonical accepted-state pointer is `state/CURRENT.md`.
+A fresh runtime restores durable state; it does not claim same-runtime continuity or private recollection.
 
-The training chat is now ready for the user to rename:
+## Current public product conflicts
 
-`Hephaestus Trained Template`
+Existing documented/observed conflicts remain bounded in the operating manual and qualification evidence. Exodus does not promote any unresolved product fact.
 
-and freeze for ordinary operational work. Future working Hephaestus chats should branch from that qualified template and restore evolving public state through the repository.
+## Current work
 
-## Current public product conflicts carried forward
-
-```text
-PROJECT_BATCH_UPLOAD:
-  DOCUMENTED = 10 files at one time
-  OBSERVED = prior controlled routes accepted more than 10
-  RELATION = DISPUTED
-
-PLUS_PROJECT_CAPACITY:
-  OFFICIAL_PROJECTS_DOC = 25
-  OFFICIAL_FILE_UPLOAD_FAQ = 20
-  RELATION = DISPUTED
-
-CHAT_ATTACHMENT_COLLISION:
-  OBSERVED = terminal (n) filename rewriting with byte preservation on tested route
-
-PROJECT_SOURCE_COLLISION:
-  DOCUMENTED = same-name collision can be accepted
-  EXACT_REWRITE_BEHAVIOR = UNKNOWN unless later tested
-
-PROJECT_INSTRUCTIONS_LIMIT:
-  OBSERVED = 8000 characters
-```
-
-Qualification does not convert bounded observations or unresolved documentation conflicts into universal product facts.
-
-## Current work transition
-
-`work/ACTIVE_WORK.md` records the next transition:
-
-`TEMPLATE_FREEZE_AND_FIRST_WORKING_BRANCH = READY_FOR_USER_CHAT_ACTION`
-
-Current public qualification state:
-
-`QUALIFIED`
+`work/ACTIVE_WORK.md` is the public work-state pointer. Project-specific work must be fresh-read from the owning repository/Bus assignment rather than inferred from a former conversation.
