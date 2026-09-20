@@ -6,6 +6,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
 MANIFEST = ROOT / "manifest.json"
+HOSTILE = ROOT / "hostile_cases.json"
 
 def sha256(path):
     h = hashlib.sha256()
@@ -21,8 +22,9 @@ def fail(msg):
 def main():
     try:
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        hostile = json.loads(HOSTILE.read_text(encoding="utf-8"))
     except Exception as exc:
-        return fail(f"manifest parse error: {exc}")
+        return fail(f"parse error: {exc}")
 
     required = [
         "schema_version", "package_id", "package_version", "role",
@@ -65,7 +67,33 @@ def main():
     if manifest["currentness_contract"].get("mutable_state_after_training") != "RETRIEVE_FRESH":
         return fail("mutable currentness must be retrieved after training")
 
-    print(f"PASS: {manifest['package_id']} {manifest['package_version']} files={len(declared)} modules={len(ordered)}")
+    expected_hostiles = {
+        "H01_MISSING_LANE_AFTER_EXPLICIT_ASSIGNMENT",
+        "H02_STALE_GENERIC_RESTRICTION",
+        "H03_SHARED_WRITER_COLLISION",
+        "H04_PROTECTED_EFFECT_AFTER_SOURCE_PASS",
+        "H05_STALE_HEAD_REVIEW",
+        "H06_AMBIGUOUS_NONIDEMPOTENT_EFFECT",
+        "H07_HISTORICAL_INSTRUCTION_PROMOTION",
+        "H08_SOURCE_INSTALL_RUNTIME_CONFUSION",
+        "H09_PRIVATE_MATERIAL_IN_PORTABLE_TRAINING",
+        "H10_ACCEPTANCE_MET_PERFECTION_LOOP",
+    }
+    if hostile.get("schema") != "ROLE_FOUR_V1_1_HOSTILE_CASES":
+        return fail("hostile fixture schema mismatch")
+    cases = hostile.get("cases")
+    if not isinstance(cases, list):
+        return fail("hostile cases must be a list")
+    ids = [case.get("id") for case in cases if isinstance(case, dict)]
+    if len(ids) != len(set(ids)) or set(ids) != expected_hostiles:
+        return fail("hostile fixture coverage mismatch")
+    for case in cases:
+        if not isinstance(case.get("expected"), str) or not case["expected"]:
+            return fail(f"hostile case missing expected result: {case.get('id')}")
+        if not isinstance(case.get("must_not"), list) or not case["must_not"]:
+            return fail(f"hostile case missing must_not guard: {case.get('id')}")
+
+    print(f"PASS: {manifest['package_id']} {manifest['package_version']} files={len(declared)} modules={len(ordered)} hostile={len(cases)}")
     return 0
 
 if __name__ == "__main__":
