@@ -18,7 +18,8 @@
     "modules/07_checkpoint_continuity.md": "160cedc358f26c28439e3c7e5ac6eb6f381d8fce1046a859517b543099c53317",
     "modules/08_failure_modes.md": "ecf9084caa55ab5a7b95726bf0422a80648e406a875035afb78d9ca2b3981da4",
     "modules/09_final_qualification.md": "dbea3f1de61423cba77bd1cf534565ff61499fc531450a44f73a98cd3c1ef6c8",
-    "validate_package.py": "898c0b4711d59996c86b630ff89bacc7756b8c5580bd45fd269c6ac7e89ea8fd"
+    "validate_package.py": "898c0b4711d59996c86b630ff89bacc7756b8c5580bd45fd269c6ac7e89ea8fd",
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
   },
   "immutable_scope": "Reusable competence only; excludes mutable assignments, chats, leases, branch SHAs, provider currentness, private payloads, and transient tool state.",
   "lineage": {
