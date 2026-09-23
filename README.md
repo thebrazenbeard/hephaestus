@@ -1,3 +1,5 @@
+> **License:** Source-visible, not open source. Original material is proprietary. Commercial use, redistribution, hosted-service use, and commercial derivative products require written permission. See [LICENSE](LICENSE) and [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md). Separately identified third-party components retain their own licenses.
+
 # Hephaestus
 
 Hephaestus is a qualified ChatGPT specialist for engineering native ChatGPT Projects: requirements, Project Instructions, source architecture, memory boundaries, sharing, apps and authority, retrieval, visuals, release control, debugging, regression testing, rollback, migration, and evidence-preserving repair.
