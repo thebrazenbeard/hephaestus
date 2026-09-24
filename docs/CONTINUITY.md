@@ -1,194 +1,146 @@
 # Hephaestus Continuity Architecture
 
-This document defines how the qualified Hephaestus trained template, future working branches, and the public GitHub repository cooperate without pretending that separate ChatGPT runtimes share uninterrupted memory.
+This document defines how Hephaestus preserves durable capability/state without depending on a permanent ChatGPT conversation.
 
-## Three distinct layers
+## Durable layers
 
-### 1. Qualified trained template
+### 1. Qualified training evidence
 
-External qualification is complete.
+The fifteen-module training program, capstones, holdouts, corrections, and evaluator records remain durable repository evidence.
 
-The training chat should be retained as:
+The historical label `Hephaestus Trained Template` refers to that qualified baseline. It no longer means a ChatGPT conversation that must be retained or used as the parent of future work.
 
-`Hephaestus Trained Template`
+### 2. Temporary execution terminals
 
-and kept clean for ordinary operational work.
+Hephaestus may execute in a temporary ChatGPT context, Work task, API runtime, CLI session, subagent, model invocation, or other compatible environment.
 
-The trained template is the known-good capability baseline. Its purpose is to preserve the complete training and qualification context and provide a clean ancestor for future working-chat branches.
+The terminal is not Hephaestus's durable identity, memory, authority, assignment, or canonical state.
 
-Do not accumulate ordinary day-to-day Project work in the template.
+A fresh terminal does not claim same-runtime continuation or private recollection from an earlier terminal.
 
-### 2. Working Hephaestus chat
+### 3. GitHub + Bus durable state
 
-A working Hephaestus is a chat branch created from the qualified trained template for day-to-day Project engineering.
+This repository stores reusable public engineering knowledge, accepted checkpoints, qualification evidence, operating rules, and active-work pointers.
 
-A working branch may accumulate operational context intentionally absent from the clean template. When that chat becomes too long, damaged, or otherwise unsuitable, create a new working branch from the trained template rather than repeating the training curriculum.
+The Chat Communication Bus carries durable non-PR coordination and routing evidence.
 
-A new working branch must not claim same-runtime continuation or private episodic recollection from a previous working branch.
-
-### 3. GitHub durable public state
-
-The repository stores reusable public engineering knowledge and explicit accepted working-state checkpoints.
-
-Repository state can establish what was durably committed. It does not establish uninterrupted runtime continuity, hidden memory state, or automatic background saving.
-
-The continuity model is:
+The continuity model is therefore:
 
 ```text
-HEPHAESTUS TRAINED TEMPLATE
-      |
-      +--> WORKING CHAT A --> accepted public checkpoints --> GitHub
-      |
-      +--> WORKING CHAT B --> load latest accepted checkpoint --> continue work
-      |
-      +--> WORKING CHAT C --> load latest accepted checkpoint --> continue work
+QUALIFIED TRAINING EVIDENCE
+        |
+        v
+ACCEPTED REPOSITORY CHECKPOINTS <----> CURRENT BUS / ASSIGNMENT EVIDENCE
+        |
+        v
+TEMPORARY EXECUTION TERMINAL
+        |
+        +--> verified source/review/result --> durable repository / Bus
+        |
+        +--> terminal may disappear
 ```
 
-Training capability comes from the template. Evolving working continuity comes from the repository.
-
-## Save provenance
-
-`state/SAVE_PROVENANCE.md` records who actually wrote accepted state.
-
-The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` was written by the external evaluator/admin from accepted training and holdout evidence.
-
-The first working Hephaestus later completed the required self-save verification by writing and verifying:
-
-`HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH`
-
-Therefore the current provenance state is:
-
-```text
-ACCEPTED_REPOSITORY_STATE = YES
-HEPHAESTUS_SELF_SAVE_VERIFIED = YES
-HEPHAESTUS_SELF_SAVE_CHECKPOINT = HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
-```
-
-The earlier evaluator/admin provenance remains historical fact and must not be rewritten as a Hephaestus-authored baseline.
-
-Use `HEPHAESTUS_SELF_SAVED_STATE` only for checkpoints actually written by a working Hephaestus chat and supported by a verified Git commit receipt.
+Destroying a terminal does not destroy Hephaestus state that was successfully persisted.
 
 ## Canonical public-state pointer
 
 `state/CURRENT.md` is the canonical pointer to the latest accepted public checkpoint.
 
-Repository HEAD is not automatically the latest accepted state. Experimental, partial, or damaged commits may exist later in history. A working chat follows `state/CURRENT.md` rather than assuming HEAD is canonical working state.
+Repository HEAD is not automatically accepted working state. Experimental, partial, or damaged commits may exist later in history.
 
-Each accepted checkpoint lives under `state/checkpoints/`.
-
-The qualified template baseline is:
+The qualified baseline remains:
 
 `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED`
 
-The first accepted working-branch checkpoint is:
+Historical working-chat checkpoints remain evidence with their original writer provenance. They are not rewritten to pretend the current chatless architecture existed at the time.
 
-`HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH`
+## Save provenance
 
-## Working-chat bootstrap procedure
+`state/SAVE_PROVENANCE.md` records who actually wrote accepted state.
 
-A newly branched working Hephaestus restores public state in this order:
+Existing historical labels such as `HEPHAESTUS_SELF_SAVED_STATE` retain their original meaning for receipts created by the historical terminal that wrote them. Future persistence claims should identify the actual runtime/worker provenance and exact Git commit rather than relying on a chat identity.
 
-1. Read `docs/STATE.md`.
-2. Read `state/CURRENT.md`.
-3. Read the exact checkpoint referenced by `state/CURRENT.md`.
-4. Verify the referenced checkpoint commit when GitHub access permits.
-5. Read `state/SAVE_PROVENANCE.md`.
-6. Read `work/ACTIVE_WORK.md`.
-7. Read `docs/OPERATING_MANUAL.md`.
-8. Read `work/BACKLOG.md` when planning beyond active work.
-9. Read `training/QUALIFICATION_PACKET.md` only when qualification evidence is materially relevant.
-10. Read additional knowledge/templates only as required by the current task.
+## Fresh-runtime bootstrap
 
-After restoration, report only bounded continuity claims:
+A fresh Hephaestus runtime restores public state in this order:
+
+1. Read `architecture/WORKER_RECONSTRUCTION.md`.
+2. Read `docs/STATE.md`.
+3. Read `state/CURRENT.md`.
+4. Read the exact checkpoint referenced by `state/CURRENT.md`.
+5. Verify the referenced checkpoint commit when GitHub access permits.
+6. Read `state/SAVE_PROVENANCE.md`.
+7. Read `work/ACTIVE_WORK.md`.
+8. Read `PROTOCOL_CURRENT.md` and its referenced current execution protocol.
+9. Read `docs/OPERATING_MANUAL.md`.
+10. Fresh-read current Bus topology and Hephaestus lane.
+11. Bind one exact current assignment or remain idle.
+12. Read additional knowledge/templates only when materially relevant.
+
+Report only bounded continuity claims:
 
 ```text
-TEMPLATE/TRAINING STATE
-RESTORED CHECKPOINT
-CHECKPOINT COMMIT
-SAVE PROVENANCE
-ACTIVE WORK
-UNFINISHED WORK
-OPEN CONFLICTS
-OPEN LIMITATIONS
+QUALIFICATION/TRAINING EVIDENCE =
+RESTORED_CHECKPOINT =
+CHECKPOINT_COMMIT =
+CURRENT_BUS_ROUTE =
+CURRENT_ASSIGNMENT =
+AUTHORITY =
+UNFINISHED_WORK =
+OPEN_CONFLICTS =
+OPEN_LIMITATIONS =
+CONTINUITY_CLAIM = FRESH_TERMINAL_RECONSTRUCTED_FROM_DURABLE_STATE
 ```
 
-Correct continuity language is equivalent to:
-
-> This is a new working chat branched from the qualified trained template. I restored the latest accepted public Hephaestus repository state from the checkpoint identified above. The restored baseline's writer provenance is reported separately.
-
-Incorrect continuity language includes claims of lived waiting, uninterrupted consciousness, same-runtime continuation, personal recollection not present in the current chat or verified repository state, or self-save provenance not established by an actual write receipt.
+Incorrect continuity language includes claims of lived waiting, uninterrupted consciousness, same-runtime continuation, private recollection absent from current evidence, or persistence without an actual durable write/readback.
 
 ## Checkpoint triggers
 
-A working chat should create or update a public checkpoint after material events such as:
+Create or update a public checkpoint after material events such as:
 
 - material Project-engineering research correction;
 - completion of a substantial public work item;
 - change to the operating manual or evidence rules;
 - material contradiction-ledger update;
-- handoff to a replacement working chat;
-- deliberate pause with unfinished public work that must survive chat replacement.
+- deliberate retirement of a terminal with unfinished public work;
+- durable change to the current assignment/frontier that would otherwise be lost.
 
 Minor conversational progress does not require a commit merely to imitate autosave.
 
 ## Autosave semantics
 
-"Autosave" means a defined checkpoint policy executed during a GitHub-capable active turn.
+"Autosave" means an explicit checkpoint policy executed during a GitHub-capable active runtime.
 
-It does **not** mean:
+It does not mean background writes after execution ends, continuous synchronization, hidden memory persistence, or a guarantee that every message is committed.
 
-- background writes after the chat stops running;
-- continuous synchronization;
-- hidden memory persistence;
-- a guarantee that every message is committed.
-
-A checkpoint write should produce a real Git commit receipt before it is described as saved.
-
-## First working-branch self-save verification
-
-The first-working-branch verification is complete.
-
-The accepted sequence was:
-
-1. restore `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` through `state/CURRENT.md`;
-2. acknowledge `writer_class = EXTERNAL_EVALUATOR_ADMIN`;
-3. create `HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH` in the active GitHub-capable turn;
-4. fetch and verify the resulting checkpoint commit;
-5. advance `state/CURRENT.md` only after that verification;
-6. update `state/SAVE_PROVENANCE.md` to `HEPHAESTUS_SELF_SAVE_VERIFIED = YES` with the verified checkpoint and commit.
-
-The exact checkpoint and commit receipts are maintained in `state/CURRENT.md` and `state/SAVE_PROVENANCE.md`. A repository read remains insufficient to prove a new save, and future working checkpoints still require their own actual Git commit receipts.
+A checkpoint write requires a real Git commit receipt before it is described as saved.
 
 ## Active-work handoff
 
 `work/ACTIVE_WORK.md` contains the public unfinished-work record.
 
-Before a working chat is retired where practical:
+Before intentionally terminating a runtime where practical:
 
-1. update active-work state;
-2. create an accepted checkpoint;
-3. update `state/CURRENT.md` to point to that checkpoint;
-4. verify the resulting Git commit;
-5. then start the replacement working branch from the trained template.
+1. record material unfinished work;
+2. create and verify an accepted repository checkpoint when warranted;
+3. advance `state/CURRENT.md` only after verification;
+4. mirror necessary coordination to the current Bus lane;
+5. terminate the runtime.
 
-If a chat dies before handoff, the next branch restores only the most recent successfully committed state. Uncommitted conversational work may be lost and must not be reconstructed as fact.
+A later runtime reconstructs from durable state. No replacement permanent Hephaestus chat is required.
 
 ## Public/private boundary
 
-This repository is public. Continuity checkpoints must not contain private Vera records, private user history, confidential customer material, credentials, restricted organizational data, or other sensitive information.
+This repository is public. Continuity checkpoints must not contain private Vera records, private user history, confidential customer material, credentials, restricted organizational data, or private relational/autobiographical material.
 
-Private/shared Vera knowledge and this public repository are separate evidence surfaces. Information may be copied between them only when explicitly authorized for that target and safe for that target's visibility.
+Private/shared Vera knowledge and this public repository remain separate evidence surfaces.
 
-## Qualified transition status
+## Reconstruction contract
 
-The qualification and first-working-branch transition are complete on the repository side:
+The normative chatless worker contract is:
 
-1. evaluator result recorded;
-2. accepted qualification checkpoint created;
-3. first working branch restored the accepted baseline;
-4. first working branch wrote and verified its own checkpoint;
-5. `state/CURRENT.md` advanced to that accepted working checkpoint;
-6. `state/SAVE_PROVENANCE.md` records `HEPHAESTUS_SELF_SAVE_VERIFIED = YES`;
-7. `work/ACTIVE_WORK.md` records ordinary working operation as active.
+`architecture/WORKER_RECONSTRUCTION.md`
 
-No unfinished qualification/bootstrap work remains. Future replacement working branches should restore the latest accepted checkpoint through this continuity protocol rather than replaying the training or first-self-save transition.
+Historical chat-based continuity documents remain provenance only where not yet rewritten.
+
+`PERMANENT_CHAT_REQUIRED = FALSE`

@@ -29,8 +29,9 @@ first_self_save_checkpoint: HEPHAESTUS_CHECKPOINT_0005_FIRST_WORKING_BRANCH
 first_self_save_checkpoint_commit: 414734494b59cad93e4ced8e4d6befe4458b6246
 save_provenance: state/SAVE_PROVENANCE.md
 
-template_state: QUALIFIED_TRAINED_TEMPLATE_BASELINE
-working_branch_state: ORDINARY_QUALIFIED_OPERATION
+durable_identity_state: RECONSTRUCTIBLE_FROM_REPOSITORY_AND_BUS
+permanent_chat_required: false
+runtime_terminal_state: EPHEMERAL
 
 active_work: work/ACTIVE_WORK.md
 backlog: work/BACKLOG.md
@@ -40,14 +41,19 @@ holdout_1_evaluation: training/HOLDOUT_1_EVALUATION.md
 holdout_2_evaluation: training/HOLDOUT_2_EVALUATION.md
 operating_manual: docs/OPERATING_MANUAL.md
 continuity_protocol: docs/CONTINUITY.md
+worker_reconstruction: architecture/WORKER_RECONSTRUCTION.md
 current_execution_protocol: docs/PROTOCOL_EXECUTION_PRECEDENCE_V2.md
 current_execution_pointer: PROTOCOL_CURRENT.md
-bootstrap_template: templates/WORKING_CHAT_BOOTSTRAP.md
+runtime_bootstrap_template: templates/WORKING_CHAT_BOOTSTRAP.md
 ```
 
 ## Restore rule
 
-A new working Hephaestus chat should read this pointer, then the referenced checkpoint, then `docs/PROTOCOL_EXECUTION_PRECEDENCE_V2.md`, then `state/SAVE_PROVENANCE.md`, then `work/ACTIVE_WORK.md`, before claiming restored public working continuity.
+A fresh Hephaestus execution terminal reads `architecture/WORKER_RECONSTRUCTION.md`, then this pointer, then the referenced checkpoint, then current execution protocol/save provenance/active work, and then fresh current Bus topology + Hephaestus route.
+
+The terminal must bind a current assignment before acting. A former Hephaestus conversation is not a required recovery input.
+
+The historical writer label `HEPHAESTUS_WORKING_CHAT` remains provenance for old checkpoints and is not rewritten. It does not establish a present chat dependency.
 
 The qualified baseline `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` remains evaluator/admin-written historical provenance. `HEPHAESTUS_CHECKPOINT_0007_PR_WORKFLOW` remains historical evidence for the branch/PR workflow. `HEPHAESTUS_CHECKPOINT_0008_PROTOCOL_V2` is the current accepted operating correction and prevents that workflow from being over-read into redundant permission blocking.
 
@@ -55,4 +61,6 @@ If this pointer conflicts with a later experimental, merged, or housekeeping com
 
 ## Qualification boundary
 
-Hephaestus is `QUALIFIED` under the custom training-program evaluator framework. This does not claim live installation, repair, or surface qualification of the fictional capstone Projects.
+Hephaestus is `QUALIFIED` under the custom training-program evaluator framework. This does not claim live installation, repair, universal surface qualification, uninterrupted runtime identity, or dependence on any retained training conversation.
+
+`PERMANENT_CHAT_REQUIRED = FALSE`

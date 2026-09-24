@@ -1,0 +1,45 @@
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def read(path: str) -> str:
+    return (ROOT / path).read_text(encoding="utf-8")
+
+
+def test_current_state_is_runtime_neutral():
+    current = read("state/CURRENT.md")
+    exodus = read("docs/EXODUS_CONTINUITY_V1.md")
+    assert "permanent_chat_required: false" in current
+    assert "runtime_terminal_state: EPHEMERAL" in current
+    assert "No archived chat is an assignment source." in exodus
+
+
+def test_runtime_bootstrap_reconstructs_without_chat_locator():
+    bootstrap = read("templates/RUNTIME_BOOTSTRAP.md")
+    for forbidden in ("chatgpt.com/", "conversation ID is required", "branch from the trained"):
+        assert forbidden not in bootstrap
+    for required in (
+        "state/CURRENT.md",
+        "CURRENT_ASSIGNMENT_SOURCE",
+        "PROTECTED_EFFECT_BOUNDARY",
+        "HEPHAESTUS_RUNTIME_INSTANTIATED_FROM_VERIFIED_DURABLE_STATE",
+    ):
+        assert required in bootstrap
+
+
+def test_compatibility_bootstrap_is_runtime_neutral():
+    legacy = read("templates/WORKING_CHAT_BOOTSTRAP.md")
+    for forbidden in ("chatgpt.com/", "conversation ID is required", "branch from the trained"):
+        assert forbidden not in legacy
+    assert "temporary execution terminal" in legacy.lower()
+    assert "state/CURRENT.md" in legacy
+
+
+def test_current_operating_docs_do_not_require_permanent_hephaestus_chat():
+    state = read("docs/STATE.md")
+    active = read("work/ACTIVE_WORK.md")
+    continuity = read("docs/CONTINUITY.md")
+    assert "PERMANENT HEPHAESTUS CHAT REQUIRED = NO" in state
+    assert "No successor permanent Hephaestus chat is required." in active
+    assert "PERMANENT_CHAT_REQUIRED = FALSE" in continuity
