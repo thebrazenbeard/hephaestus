@@ -28,11 +28,12 @@ Completed:
 
 Remaining candidates, in priority order:
 
-1. choose an explicit open-source license before encouraging third-party reuse;
-2. add issue/reporting templates if public use warrants them;
-3. consider automated repository-only validation for Markdown links/schema shape where useful;
-4. consider branch-protection or required-review settings when an independent reviewer/workflow exists to enforce them;
-5. never describe repository automation as ChatGPT background memory persistence.
+1. add issue/reporting templates if public use warrants them;
+2. consider automated repository-only validation for Markdown links/schema shape where useful;
+3. consider branch-protection or required-review settings when an independent reviewer/workflow exists to enforce them;
+4. never describe repository automation as ChatGPT background memory persistence.
+
+Licensing is no longer an open item: the repository adopted a source-available proprietary license plus separate commercial-licensing terms on 2026-09-23. Public visibility does not make the repository open source.
 
 These hardening items are improvements, not prerequisites for the already accepted qualification or verified continuity state.
 
