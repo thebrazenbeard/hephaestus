@@ -99,4 +99,4 @@ as the latest accepted public working checkpoint, while preserving `HEPHAESTUS_C
 
 The qualified-template transition and first working-branch bootstrap are complete. Ordinary qualified Hephaestus operation is active; no unfinished qualification or bootstrap work remains.
 
-The current next repository-hardening decision recorded in `work/BACKLOG.md` is selection of an explicit open-source license before encouraging third-party reuse.
+The repository now has an explicit source-available proprietary license and separate commercial-licensing terms. Future reuse must follow `LICENSE` and `COMMERCIAL_LICENSE.md`; repository visibility does not imply open-source or commercial permission.
