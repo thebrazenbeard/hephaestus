@@ -100,3 +100,7 @@ as the latest accepted public working checkpoint, while preserving `HEPHAESTUS_C
 The qualified-template transition and first working-branch bootstrap are complete. Ordinary qualified Hephaestus operation is active; no unfinished qualification or bootstrap work remains.
 
 The repository now has an explicit source-available proprietary license and separate commercial-licensing terms. Future reuse must follow `LICENSE` and `COMMERCIAL_LICENSE.md`; repository visibility does not imply open-source or commercial permission.
+
+## Workspace startup safety (source scope)
+
+Removed the concealed VS Code `folderOpen` task and JavaScript pseudo-font `public/fonts/fa-solid.lkf`, and set automatic tasks to `"off"` on current source. Static tests and read-only CI guard this known startup vector. Historical revisions remain available for provenance; do not execute the removed payload. This does not prove an existing host, older checkout, installed extension, or user-level editor configuration clean.
