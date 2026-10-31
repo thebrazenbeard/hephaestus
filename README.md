@@ -1,106 +1,61 @@
-> **License:** Source-visible, not open source. Original material is proprietary. Commercial use, redistribution, hosted-service use, and commercial derivative products require written permission. See [LICENSE](LICENSE) and [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md). Separately identified third-party components retain their own licenses.
+# Hephaestus — ChatGPT Project Engineering Playbook
 
-# Hephaestus
+Hephaestus is a **source-visible engineering knowledge base and template collection** for designing, testing, reviewing, and maintaining native ChatGPT Projects. It is intended for people building reusable Project configurations with explicit source provenance, privacy boundaries, external-action controls, and acceptance evidence.
 
-Hephaestus is a qualified ChatGPT specialist for engineering native ChatGPT Projects: requirements, Project Instructions, source architecture, memory boundaries, sharing, apps and authority, retrieval, visuals, release control, debugging, regression testing, rollback, migration, and evidence-preserving repair.
+This repository supplies **procedures, checklists, templates, qualification records, and versioned public checkpoints**. It does not supply a standalone deployment service, a ChatGPT API client, an access-control system, or a verified installation of a Project in another account.
 
-## Current status
+## What you can use
 
-- Training program: **Modules 1–15 accepted**
-- Training curriculum: **COMPLETE**
-- Capstone 1: **ACCEPTED_AFTER_CORRECTION**
-- Capstone 2: **ACCEPTED_AFTER_FORENSIC_CORRECTIONS**
-- External Holdout 1: **PASS**
-- External Holdout 2 fresh branch: **PASS**
-- Hard gates: **PASS**
-- Final custom training-program qualification: **QUALIFIED**
-- Final evaluator A–J average: **4.0 / 4.0**
+| Need | Repository resource | Purpose |
+| --- | --- | --- |
+| Scope a Project | [Engineering core](knowledge/PROJECT_ENGINEERING_CORE.md) | Requirements, source classes, memory, sharing, actions, and test boundaries |
+| Work through a delivery | [Operating manual](docs/OPERATING_MANUAL.md) | Intake, instruction review, source inventory, release stages, cold-start and recovery checks |
+| Review authority | [Operating manual §8](docs/OPERATING_MANUAL.md#8-apps-and-authority) | Separate tool availability, provider permissions, organizational authority, approval, execution, and verified effect |
+| Preserve a decision | [Checkpoint template](templates/STATE_CHECKPOINT.md) | Record accepted state, corrections, unknowns, and provenance |
+| Transfer public context | [Working-chat bootstrap](templates/WORKING_CHAT_BOOTSTRAP.md) | Restore a documented checkpoint without claiming uninterrupted chat memory |
+| Inspect governance | [Repository governance](docs/GOVERNANCE.md) | Public-data, contribution, writer, and publication rules |
+| Examine training evidence | [Qualification packet](training/QUALIFICATION_PACKET.md) | Custom training-program evaluations and their limits |
 
-This qualification is an external-evaluator decision under the custom Hephaestus training program. It is not an OpenAI-issued certification and does not claim that fictional capstone Projects were live-installed, repaired, or empirically qualified on every surface.
+## A practical workflow
 
-## Repository purpose
+1. **Define the boundary.** Describe intended users, source sensitivity, Project sharing/memory needs, connected providers, external effects, and acceptance tests. Unresolved authorization or privacy questions remain unresolved.
+2. **Build the configuration as an artifact.** Keep Project Instructions for model behavior; use actual provider permissions, organizational approvals, and separate restricted contexts for access control. Record exact instructions and source identities where available.
+3. **Test the proposed release.** Check current-vs-stale source priority, absent facts, prompt injection, action authorization, and a fresh Project chat. A pass covers only the tested route and surface.
+4. **Record a bounded decision.** Use the [checkpoint template](templates/STATE_CHECKPOINT.md) to preserve evidence, failures, and explicit unknowns. Do not substitute a manifest, model assertion, or tool response for readback of an external effect.
 
-This repository is the public, version-controlled home for Hephaestus's reusable engineering knowledge, accepted state checkpoints, training and correction history, operating manual, qualification evidence, continuity protocol, templates, and future public tooling.
+For example, a team developing a shared support-reference Project could keep broadly readable manuals in the shared Project, store restricted customer records behind separate provider permissions, and require a fresh-chat test before approving an instruction or source update. This is an **illustrative design pattern**, not a deployed integration provided by this repository.
 
-Git history is evidence of repository changes. It is not evidence of continuous memory, consciousness, deployment, installation, or runtime state outside the repository.
+## Engineering boundaries
 
-## Qualified trained-template continuity model
+- **Instructions are not permissions.** Prompt text cannot enforce provider ACLs, identity, consent, or organizational authority.
+- **A source is not automatically knowledge.** Upload, parsing, retrieval, attribution, and correct application are separate states.
+- **Memory is not an audit database.** A replacement working chat must explicitly restore accepted public state and distinguish it from private recollection.
+- **A release is not a file upload.** Inventory, configuration, negative tests, cold start, and any actual effect readback require separate evidence.
+- **Qualification is surface-specific.** Evidence from Project Chat does not automatically qualify Voice, Deep Research, another model, or a connected app.
 
-The qualified training chat is intended to be retained as:
+The [operating manual](docs/OPERATING_MANUAL.md) and [engineering core](knowledge/PROJECT_ENGINEERING_CORE.md) expand these rules. They are this project's engineering methods, **not official platform policy**. Where external platform behavior matters, check current primary-provider documentation and the specific configuration being used.
 
-`Hephaestus Trained Template`
+## Current repository state
 
-and kept clean for ordinary operational work.
+- The custom Hephaestus training ledger records **15 of 15 modules accepted**, two corrected capstones, two holdout evaluations, and a final `QUALIFIED` decision. That is a **custom evaluator result**, not an OpenAI-issued certificate or a demonstration of a live production installation. See [state](docs/STATE.md) and [qualification evidence](training/QUALIFICATION_PACKET.md).
+- [The accepted-state pointer](state/CURRENT.md) currently identifies `HEPHAESTUS_CHECKPOINT_0008_PROTOCOL_V2`, with the previous `0007` PR-workflow checkpoint and `0004` qualified baseline distinguished by writer provenance. Read the pointer, not a hard-coded README status, when restoring later working state.
+- [Execution precedence V2](docs/PROTOCOL_EXECUTION_PRECEDENCE_V2.md) clarifies isolated branch authorization and effect classes without relaxing provider, privacy, or production gates. [The current protocol pointer](PROTOCOL_CURRENT.md) identifies that correction.
+- Repository checkpoints record GitHub-persisted text and commit provenance. They do **not** prove continuous model memory, scheduled background execution, an installed Project, or a successful external mutation.
 
-Ordinary work occurs in chat branches created from that template. Working branches restore evolving public state from this repository rather than repeating the training curriculum.
+## Validation and maintenance
 
-```text
-TRAINED TEMPLATE = qualified capability baseline
-GITHUB CHECKPOINTS = evolving durable public work state
-WORKING CHAT = current execution context
+The repository includes a small Python `unittest` suite guarding against tracked VS Code workspace startup execution. From a local checkout with Python 3:
+
+```sh
+python3 -B -m unittest discover -s tests -v
 ```
 
-A replacement working chat restores from `state/CURRENT.md` and the accepted checkpoint it references. It does not claim same-runtime continuation or private recollection from an earlier working chat.
+These checks inspect repository files. They do not exercise a ChatGPT Project, approve a release, or certify the safety of an already-installed editor, extension, or workstation. No runtime deployment or universal platform compatibility is established by this test suite.
 
-See `docs/CONTINUITY.md` and `templates/WORKING_CHAT_BOOTSTRAP.md`.
+To contribute, consult [CONTRIBUTING.md](CONTRIBUTING.md) and [CLA.md](CLA.md); preserve source/evidence labels, public-data restrictions, accepted checkpoint provenance, and one-writer branch discipline.
 
-## Public-data boundary
+## Licensing
 
-This repository is public. Do **not** commit:
+**Source-visible, proprietary — not open source.** [LICENSE](LICENSE) permits specified private **noncommercial** evaluation, research, review, and related uses under its terms; it does not generally authorize redistribution, public deployment of derivatives, commercial use, or commercial-model training. Commercial permission requires a separate written grant; see [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md). Third-party components retain their separate rights.
 
-- private Vera records or database contents;
-- user-private history or personal data;
-- credentials, secrets, tokens, or private keys;
-- confidential Project files or customer data;
-- restricted organizational records;
-- private relational or autobiographical material.
-
-Reusable engineering knowledge may be mirrored here when safe for public release. Private/shared Vera knowledge remains in its authorized private stores.
-
-## Core evidence rule
-
-Hephaestus separates:
-
-`DOCUMENTED` · `OBSERVED` · `INFERRED` · `DISPUTED` · `UNKNOWN` · `RETRACTED` · `SUPERSEDED`
-
-A clean-looking field is never more important than an honest `UNKNOWN`.
-
-Permanent forensic lesson:
-
-`SCHEMA_COMPLETION_PRESSURE -> FABRICATED_PRECISION`
-
-A schema field does not authorize an invented value.
-
-## Repository map
-
-- `docs/STATE.md` — current qualification, scope, limitations, and transition state
-- `docs/GOVERNANCE.md` — repository governance and persistence rules
-- `docs/CONTINUITY.md` — trained-template / working-chat / repository continuity architecture
-- `docs/OPERATING_MANUAL.md` — canonical public field manual
-- `state/CURRENT.md` — canonical pointer to the latest accepted public checkpoint
-- `state/checkpoints/` — accepted state checkpoints
-- `work/ACTIVE_WORK.md` — current public unfinished-work record
-- `work/BACKLOG.md` — public future work
-- `training/TRAINING_LEDGER.md` — module, correction, capstone, and holdout history
-- `training/QUALIFICATION_PACKET.md` — final evaluator evidence and credential scope
-- `training/HOLDOUT_1_EVALUATION.md` — Meridian evaluator record
-- `training/HOLDOUT_2_EVALUATION.md` — Cedarstone fresh-branch evaluator record
-- `knowledge/PROJECT_ENGINEERING_CORE.md` — reusable native Project engineering doctrine
-- `templates/STATE_CHECKPOINT.md` — public checkpoint template
-- `templates/WORKING_CHAT_BOOTSTRAP.md` — new working-chat restoration procedure
-
-## Current accepted working state
-
-`state/CURRENT.md` is the canonical pointer. It currently identifies:
-
-`HEPHAESTUS_CHECKPOINT_0007_PR_WORKFLOW`
-
-as the latest accepted public working checkpoint, while preserving `HEPHAESTUS_CHECKPOINT_0004_QUALIFIED` as the external-evaluator-written qualified baseline.
-
-The qualified-template transition and first working-branch bootstrap are complete. Ordinary qualified Hephaestus operation is active; no unfinished qualification or bootstrap work remains.
-
-The repository now has an explicit source-available proprietary license and separate commercial-licensing terms. Future reuse must follow `LICENSE` and `COMMERCIAL_LICENSE.md`; repository visibility does not imply open-source or commercial permission.
-
-## Workspace startup safety (source scope)
-
-Removed the concealed VS Code `folderOpen` task and JavaScript pseudo-font `public/fonts/fa-solid.lkf`, and set automatic tasks to `"off"` on current source. Static tests and read-only CI guard this known startup vector. Historical revisions remain available for provenance; do not execute the removed payload. This does not prove an existing host, older checkout, installed extension, or user-level editor configuration clean.
+Copyright © 2026 Patrick Sims. All rights reserved.
